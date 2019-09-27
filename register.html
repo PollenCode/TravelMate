@@ -9,11 +9,13 @@
 	<script>
 		var failedPopper = null;
 
-		document.onload = function()
+		function loaded()
 		{
 			failedPopper = document.getElementById("popper-password-check-failed");
 			failedPopper.hide();
-		};
+
+			console.info("fired");
+		}
 		
 		function doPasswordCheck(form)
 		{
@@ -38,7 +40,7 @@
 		}
 	</script>
 </head>
-<body>
+<body onload="loaded()">
 	<img src="img/travelmatelogo.png" alt="Logo">
  	<header>
  		<ul class="nav">
