@@ -12,7 +12,6 @@
 		function loaded()
 		{
 			failedPopper = document.getElementById("popper-password-check-failed");
-			failedPopper.hide();
 
 			console.info("fired");
 		}
@@ -28,7 +27,6 @@
 		
 			if (!valid)
 			{
-				failedPopper.show();
 				new Popper(checkTest, failedPopper, {
 				    placement: 'bottom'
 				});
