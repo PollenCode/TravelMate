@@ -1,6 +1,6 @@
 <?php
 
-$required_fields = array('name', 'firstname', 'password', 'email', 'dateOfBirth');
+$required_fields = array('firstname', 'lastname', 'password', 'email', 'dateOfBirth');
 $error = false;
 foreach($required_fields as $field) 
 {
@@ -16,15 +16,19 @@ if ($error)
     die();
 }
 
-$password_salt = bin2hex(random_bytes(32));
+$password_salt = bin2hex(random_bytes(64));
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 echo "hash: " . $password_hash . "<br> salt: " . $password_salt . "<br>";
 
-$db_servername = "stijnrogiest.ikdoeict.be:3306";
+/*$db_servername = "stijnrogiest.ikdoeict.be:3306";
 $db_username = "stijn.rogiest";
 $db_password = "8qYr~0k4";
-$db_name = "stijn_rogiest_";
+$db_name = "stijn_rogiest_";*/
+$db_servername = "localhost";
+$db_username = "root";
+$db_password = "Kp6MHLc7ueEtk40c";
+$db_name = "travelmate";
 
 $conn = new mysqli($db_servername, $db_username, $db_password, $db_name);
 if ($conn->connect_error)
@@ -32,8 +36,7 @@ if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO Users (Name, FirstName, Password, PasswordSalt, DateOfBirth, Email)
-VALUES ('" . $_POST["name"] . "', '" . $_POST["firstname"] . "', '" . $password_hash . "', '" . $password_salt . "', '" . $_POST["dateOfBirth"] . "' , '" . $_POST["email"] .  "')";
+$sql = "INSERT INTO users (FirstName, LastName, Email, DateOfBirth, PasswordHash, PasswordSalt) VALUES ('" . $_POST["firstname"] . "', '" . $_POST["lastname"] . "', '" . $_POST["email"] . "' , '" . $_POST["dateOfBirth"] . "', '" . $password_hash . "', '" . $password_salt .  "')";
 
 if ($conn->query($sql) === TRUE)
 {
