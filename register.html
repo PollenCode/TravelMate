@@ -7,6 +7,9 @@
 	<title>register</title>
 
 	<script>
+		var failedPopper = form.getElementById("popper-password-check-failed");
+		failedPopper.hide();
+
 		function doPasswordCheck(form)
 		{
 			var check = form.querySelector(".password-check");
@@ -17,9 +20,12 @@
 			console.info("checkTest: " + checkTest.value);
 		
 			if (!valid)
-				new Popper(checkTest, "De ingevoerde wachtwoorden komen niet overeen.", {
+			{
+				failedPopper.show();
+				new Popper(checkTest, failedPopper, {
 				    placement: 'bottom'
 				});
+			}
 
 			console.info(valid ? "gelijk" : "ongelijk");
 
@@ -37,6 +43,7 @@
 			<li><a href="contact.html">Contact</a> <i class="fas fa-address-book"></i></li>
  		</ul>	
  	</header>
+ 	<div id="popper-password-check-failed">De ingevoerde wachtwoorden komen niet overeen.</div>
 	<div>
 		<h1>Registreer</h1>
 		<form method="POST" onsubmit="return doPasswordCheck(this);" action="/createAccount.php">
