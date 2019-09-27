@@ -7,9 +7,12 @@
 	<title>register</title>
 
 	<script>
-		var failedPopper = document.getElementById("popper-password-check-failed");
-		failedPopper.hide();
-
+		document.onload = function()
+		{
+			var failedPopper = document.getElementById("popper-password-check-failed");
+			failedPopper.hide();
+		};
+		
 		function doPasswordCheck(form)
 		{
 			var check = form.querySelector(".password-check");
