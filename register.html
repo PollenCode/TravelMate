@@ -4,6 +4,20 @@
 	<meta charset="UTF-8">
 	<script src="https://kit.fontawesome.com/4dd0d35705.js" crossorigin="anonymous"></script>
 	<title>register</title>
+
+	<script>
+		function doPasswordCheck(form)
+		{
+			var check = form.querySelector(".password-check");
+			var checkTest = form.querySelector(".password-check-test");
+
+			console.info("check: " + check);
+			console.info("checkTest: " + checkTest);
+			console.info(check.value == checkTest.value ? "gelijk" : "ongelijk");
+
+			return check.value == checkTest.value;
+		}
+	</script>
 </head>
 <body>
 	<img src="img/travelmatelogo.png" alt="Logo">
@@ -17,7 +31,7 @@
  	</header>
 	<div>
 		<h1>Registreer</h1>
-		<form id="register-form" method="POST" onsubmit="doPasswordCheck('register-form')" action="/createAccount.php">
+		<form method="POST" onsubmit="return doPasswordCheck(this);" action="/createAccount.php">
 			Voornaam: <input type="text" name="firstname">
 			Achternaam: <input type="text" name="lastname">
 			Leeftijd: <input type="text" name="dateOfBirth">
@@ -27,21 +41,7 @@
 			<input type="submit" value="Registreer">
 		</form>
 	</div>
-	<script>
-		function doPasswordCheck(formId)
-		{
-			var form = document.getElementById(formId);
-
-			var check = form.querySelector(".password-check");
-			var checkTest = form.querySelector(".password-check-test");
-
-			console.info("check: " + check);
-			console.info("checkTest: " + checkTest);
-			console.info(check.value == checkTest.value ? "gelijk" : "ongelijk");
-
-			return check.value == checkTest.value;
-		}
-	</script>
+	
 	<footer>
 
 	</footer>
