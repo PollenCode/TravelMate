@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<script src="https://kit.fontawesome.com/4dd0d35705.js" crossorigin="anonymous"></script>
+	<script src="js/popper.min.js"></script>
 	<title>register</title>
 
 	<script>
@@ -10,10 +11,17 @@
 		{
 			var check = form.querySelector(".password-check");
 			var checkTest = form.querySelector(".password-check-test");
+			var valid = check.value == checkTest.value
 
 			console.info("check: " + check.value);
 			console.info("checkTest: " + checkTest.value);
-			console.info(check.value == checkTest.value ? "gelijk" : "ongelijk");
+		
+			if (!valid)
+				new Popper(checkTest, "De ingevoerde wachtwoorden komen niet overeen.", {
+				    placement: 'bottom'
+				});
+
+			console.info(valid ? "gelijk" : "ongelijk");
 
 			return check.value == checkTest.value;
 		}
