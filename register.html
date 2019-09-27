@@ -15,23 +15,18 @@
 			<li><a href="contact.html">Contact</a> <i class="fas fa-address-book"></i></li>
  		</ul>	
  	</header>
-		<div>
-		 	<h1>Registreer</h1>
-				<form>
-				 Voornaam:
-				  <input type="text" name="name">
-				 Achternaam:
-				  <input type="text" name="lastname">
-				  Leeftijd:
-				  <input type="text" name="dateOfBirth">
-				  Wachtwoord:
-				  <input type="text" name="password">
-				  Wachtwoord Bevestigen:
-				  <input type="text" name="repassword">
-				  Email:
-				  <input type="text" name="email">
-				</form>
-		</div>
+	<div class="register-form">
+		<h1>Registreer</h1>
+		<form method="POST" action="/createAccount.php">
+			Voornaam: <input type="text" name="firstname">
+			Achternaam: <input type="text" name="lastname">
+			Leeftijd: <input type="text" name="dateOfBirth">
+			Wachtwoord: <input type="text" name="password">
+			Wachtwoord Bevestigen: <input type="text" name="repassword">
+			Email: <input type="text" name="email">
+			<input type="submit" value="Register">
+		</form>
+	</div>
 	<footer>
 
 	</footer>
