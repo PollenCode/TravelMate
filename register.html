@@ -11,13 +11,13 @@
 			var check = form.querySelector(".password-check");
 			var checkTest = form.querySelector(".password-check-test");
 
-			console.info("check: " + check);
-			console.info("checkTest: " + checkTest);
+			console.info("check: " + check.value);
+			console.info("checkTest: " + checkTest.value);
 			console.info(check.value == checkTest.value ? "gelijk" : "ongelijk");
 
-			return false;//check.value == checkTest.value;
-		}
+			return check.value == checkTest.value;
 	</script>
+		}
 </head>
 <body>
 	<img src="img/travelmatelogo.png" alt="Logo">
