@@ -1,5 +1,7 @@
 <?php
 
+// https://github.com/thephpleague/oauth2-client
+
 $required_fields = array('firstname', 'lastname', 'password', 'email', 'dateOfBirth');
 $error = false;
 foreach($required_fields as $field) 
@@ -17,9 +19,11 @@ if ($error)
 }
 
 $password_salt = bin2hex(random_bytes(32));
-$password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+$password_salt_extra = "/'3RRHsXYm(pp\-,";
+$passowrd_pepper = bin2hex(random_bytes(1)); // Not implemented
+$password_hash = password_hash($_POST["password"] . $password_salt_extra . $password_salt, PASSWORD_DEFAULT);
 
-echo "hash: " . $password_hash . "<br> salt: " . $password_salt . "<br>";
+echo "hash: " . $password_hash . "<br> salt: " . $password_salt . "<br> salt_extra: " . $password_salt_extra . "<br> pepper: " . $passowrd_pepper . "<br>";
 
 /*$db_servername = "stijnrogiest.ikdoeict.be:3306";
 $db_username = "stijn.rogiest";
@@ -50,7 +54,7 @@ else
 
 $conn->close();   
 
-header("Location: " . "/index.html");
+//header("Location: " . "/index.html");
 die();
 
 ?>
