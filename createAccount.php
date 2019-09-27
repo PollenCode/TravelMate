@@ -16,7 +16,7 @@ if ($error)
     die();
 }
 
-$password_salt = bin2hex(random_bytes(64));
+$password_salt = bin2hex(random_bytes(32));
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 echo "hash: " . $password_hash . "<br> salt: " . $password_salt . "<br>";
