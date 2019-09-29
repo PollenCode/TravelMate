@@ -1,6 +1,7 @@
 const express = require("express");
 const expressSession = require("express-session");
 const path = require("path");
+const util = require("util");
 const mongoose = require("mongoose");
 const passport = require("passport");
 
@@ -34,6 +35,10 @@ app.use(express.static(path.join(__dirname, "public"))); // Set the static resou
 app.use(express.json()); // Enable json serializer
 app.use(express.urlencoded({ extended: false }));
 
+app.use((req, res, next) => {
+    req.errorPage = "error"; // Set a default error page view for every request following 
+    next();
+});
 // Actual pages with views in './views'
 const indexPage = require("./routes/index.js");
 app.use("/", indexPage);
@@ -48,6 +53,9 @@ app.use("/login", (req, res, next) => {
 app.use("/contact", (req, res, next) => {
     res.render("contact", null);
 });
+app.use("/createError", (req, res, next) => {
+    next(new Error(req.query.message));
+});
 
 // Internal pages, these do not have a view
 app.use("/api/user", require("./routes/user")); // Contains register, login, me, logout
@@ -55,18 +63,23 @@ app.use("/api/user", require("./routes/user")); // Contains register, login, me,
 // On next fallthrough, aka errors
 app.use((err, req, res, next) => {
 
-    console.log("ERROR: " + err.message);
+    var message = err.message;
+    var title = "Error!"
 
-    if (!err.context)
+    var i = message.indexOf(":");
+    if (i >= 0)
     {
-        res.render("error", { errorMessage: err.message });
+        title = message.substring(0, i);
+        message = message.substring(i + 1);
     }
-    else
-    {
-        res.render(err.context, { errorMessage: err.message });
-    }
+    message = message || "No description"
 
-   
+    console.log(util.format("[Error/%s] %s", title, message));
+
+    res.render(req.errorPage, { 
+        errorMessage: message, 
+        errorMessageTitle: title 
+    });
 });
 
 

@@ -15,8 +15,15 @@
             <li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
         </ul>
     </header>
-    <h1>Oops!</h1>
-    <h2>There was a problem.</h2>
-    <p>{{errorMessage}}</p>
+    <div class="error-box box">
+        <h3>
+            {% if errorMessageTitle != null %}
+                {{errorMessageTitle}}
+            {% else %}
+            Oops, there was a problem!
+            {% endif %}
+        </h3>
+        {{errorMessage}}
+    </div>
 </body>
 </html>

@@ -19,6 +19,18 @@
             <li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
         </ul>
     </header>
+    {% if errorMessage != null %}
+		<div class="error-box box">
+			<h3>
+				{% if errorMessageTitle != null %}
+					{{errorMessageTitle}}
+				{% else %}
+					Error!
+				{% endif %}
+			</h3>
+			{{errorMessage}}
+		</div>
+	{% endif %}
     <form method="POST" action="/api/user/login">
         Email: <input type="text" name="email" placeholder="email">
         Password: <input type="password" name="password" placeholder="password">

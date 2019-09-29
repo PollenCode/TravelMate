@@ -5,6 +5,7 @@ const salter = require("../salter");
 const passport = require("passport");
 
 router.post("/register", (req, res, next) => {
+    req.errorPage = "register";
     console.log("Finding user...");
     userModel.findOne({ email: req.body.email }, (err, user) =>
     {
@@ -31,9 +32,12 @@ router.post("/register", (req, res, next) => {
     });
 });
 
-router.post("/login", passport.authenticate("local", {
-    successRedirect: "/api/user/me"
-}))
+router.post("/login", (req, res, next) => {
+    req.errorPage = "login";
+    passport.authenticate("local", {
+        successRedirect: "/index"
+    })(req, res, next);
+});
 
 router.get("/me", (req, res, next) => {
     if (req.user == null)
@@ -59,25 +63,5 @@ router.get("/logout", (req, res, next) => {
         message: "User is now logged out."
     });
 });
-
-// Old methon without passport lib
-/*router.post("/login", (req, res, next) => {
-    const email = req.body.email;
-    const password = req.body.password;
-
-    userModel.findOne({ email: email }, (err, user) => {
-        if (err)
-            return next(err);  
-        if (user == null)
-            return next(new Error("User not found."));
-        if (!salter.checkPassword(password, user.passwordHash, user.passwordSalt))
-            return next(new Error("Incorrect password."));
-
-        res.json({
-            status: "ok",
-            user: user
-        });
-    });
-});*/
 
 module.exports = router;

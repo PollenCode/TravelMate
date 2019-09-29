@@ -2,11 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-    var displayName = req.user == null ? null : req.user.email;
 
-    res.render("index", {
-        displayName: displayName
-    });
+    req.query.displayName = req.user == null ? null : req.user.email;
+    res.render("index", req.query);
 });
 
 module.exports = router;
