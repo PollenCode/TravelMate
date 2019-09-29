@@ -4,6 +4,9 @@ const path = require("path");
 const mongoose = require("mongoose");
 const passport = require("passport");
 
+const authorizer = require("./authorizer");
+authorizer.setupLocalLogin(passport);
+
 mongoose.connect("mongodb://localhost/travelmate", (err, data) => {
     if (err)
     {
@@ -47,15 +50,23 @@ app.use("/contact", (req, res, next) => {
 });
 
 // Internal pages, these do not have a view
-app.use("/api/user", require("./routes/user")); // Contains register/login
-
-/*app.use("/api/register", require("./routes/register.js"));
-app.use("/api/login", require("./routes/login.js"));*/
+app.use("/api/user", require("./routes/user")); // Contains register, login, me, logout
 
 // On next fallthrough, aka errors
 app.use((err, req, res, next) => {
+
     console.log("ERROR: " + err.message);
-    res.render("error", { message: err.message });
+
+    if (!err.context)
+    {
+        res.render("error", { errorMessage: err.message });
+    }
+    else
+    {
+        res.render(err.context, { errorMessage: err.message });
+    }
+
+   
 });
 
 
