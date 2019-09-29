@@ -4,6 +4,7 @@ const path = require("path");
 const util = require("util");
 const mongoose = require("mongoose");
 const passport = require("passport");
+const cmd = require("node-cmd");
 
 const authorizer = require("./authorizer");
 authorizer.setupLocalLogin(passport);
@@ -40,17 +41,23 @@ const indexPage = require("./routes/index.js");
 app.use("/", indexPage);
 app.use("/home", indexPage);
 app.use("/index", indexPage);
-app.use("/register", (req, res, next) => {
+app.get("/register", (req, res, next) => {
     res.render("register", null);
 });
-app.use("/login", (req, res, next) => {
+app.get("/login", (req, res, next) => {
     res.render("login", null);
 });
-app.use("/contact", (req, res, next) => {
+app.get("/contact", (req, res, next) => {
     res.render("contact", null);
 });
-app.use("/createError", (req, res, next) => {
+app.get("/development/createError", (req, res, next) => {
     next(new Error(req.query.message));
+});
+app.post("/development/gitupdate", (req, res, next) => {
+    console.log("[GitHub] Received git change. Pulling...");
+    cmd.get("git pull",(err, data, stderr) => {
+            console.log("[GitHub] Output: ", data)
+    });
 });
 
 // Internal pages, these do not have a view
