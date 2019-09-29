@@ -10,13 +10,9 @@ authorizer.setupLocalLogin(passport);
 
 mongoose.connect("mongodb://localhost/travelmate", (err, data) => {
     if (err)
-    {
         console.log("Database connection failed!");
-    }
     else
-    {
         console.log("Database connection succeed!");
-    }
 });
 
 global.appRoot = path.resolve(__dirname);
