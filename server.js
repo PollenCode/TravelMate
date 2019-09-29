@@ -30,9 +30,11 @@ app.use("/", indexPage);
 app.use("/home", indexPage);
 app.use("/index", indexPage);
 app.use("/register", (req, res, next) => {
-    res.sendFile(path.join(appRoot, "views", "register.html"));
+    res.render("register", null);
 });
-
+app.use("/contact", (req, res, next) => {
+    res.render("contact", null);
+});
 // Internal pages, these do not have a view
 app.use("/internal/register", require("./routes/register.js"));
 app.use("/internal/login", require("./routes/login.js"));
