@@ -2,22 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script src="https://kit.fontawesome.com/4dd0d35705.js" crossorigin="anonymous"></script>
-	<script src="js/popper.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<title>register</title>
-
+	<title>TravelMate - Register</title>
 	<script>
-		var failedPopper = null;
-
-		function loaded()
-		{
-			failedPopper = document.getElementById("popper-password-check-failed");
-
-			console.info("fired");
-		}
-		
+	
 		function doPasswordCheck(form)
 		{
 			var check = form.querySelector(".password-check");
@@ -26,13 +18,6 @@
 
 			console.info("check: " + check.value);
 			console.info("checkTest: " + checkTest.value);
-		
-			if (!valid)
-			{
-				new Popper(checkTest, failedPopper, {
-				    placement: 'bottom'
-				});
-			}
 
 			console.info(valid ? "gelijk" : "ongelijk");
 
@@ -40,7 +25,7 @@
 		}
 	</script>
 </head>
-<body onload="loaded()">
+<body>
  	<header>
 		<ul class="nav">
 			<li><a href="index">Home <i class="fas fa-home"></i></a></li>
@@ -50,16 +35,17 @@
 		    <li class="logo"><img class="logo" src="img/travelmatelogo3.png" alt="Logo"></li>
 		</ul>
  	</header>
- 	<div id="popper-password-check-failed">De ingevoerde wachtwoorden komen niet overeen.</div>
 	<div>
 		<h1>Registreer</h1>
-		<form method="POST" onsubmit="return doPasswordCheck(this);" action="/internal/register">
-			Voornaam: <input type="text" name="firstname">
+		<form method="POST" onsubmit="return doPasswordCheck(this);" action="/api/user/register">
+			Email: <input type="text" name="email" placeholder="email">
+			Password: <input type="password" name="password" placeholder="password">
+			<!--Voornaam: <input type="text" name="firstname">
 			Naam: <input type="text" name="lastname">
 			Geboortedatum: <input type="text" name="dateOfBirth">
 			Wachtwoord: <input class="password-check" type="text" name="password">
 			Wachtwoord Bevestigen: <input class="password-check-test" type="text" name="repassword">
-			Email: <input type="text" name="email">
+			Email: <input type="text" name="email">-->
 			<input type="submit" value="Registreer">
 		</form>
 	</div>
