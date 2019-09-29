@@ -28,6 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 const indexPage = require("./routes/index.js");
 app.use("/", indexPage);
 app.use("/home", indexPage);
+app.use("/index", indexPage);
 app.use("/register", (req, res, next) => {
     res.sendFile(path.join(appRoot, "views", "register.html"));
 });
