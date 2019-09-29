@@ -55,7 +55,8 @@ app.get("/development/createError", (req, res, next) => {
 });
 app.post("/development/gitupdate", (req, res, next) => {
     console.log("[GitHub] Received git change. Pulling...");
-    cmd.run("git pull");
+    cmd.get("git pull", (err, data, stderr) => console.log("[GitHub]" + data));
+    //cmd.run("git pull");
     console.log("[GitHub] Done?");
 });
 
