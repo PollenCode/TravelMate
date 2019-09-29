@@ -1,22 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const userModel = require("../models/userModel");
-const bcrypt = require("bcrypt");
-const crypto = require("crypto");
 
 const salter = require("../salter");
 
-
+console.info("registereen");
 
 router.post("/", (req, res, next) => {
-
-    
-    /*const passwordSalt = crypto.randomBytes(32).toString('hex'); 
-    const passwordExtraSalt = ",~]wP&HeU2Hva]3J";
-    const passwordHash = bcrypt.hashSync(password + passwordExtraSalt + passwordSalt, 10);*/
-
-    
-
     userModel.findOne({ email: req.body.email }, (err, user) =>
     {
         if (err)

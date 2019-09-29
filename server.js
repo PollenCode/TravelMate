@@ -22,8 +22,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-
-
 // Actual pages with views in './views'
 const indexPage = require("./routes/index.js");
 app.use("/", indexPage);
@@ -35,13 +33,14 @@ app.use("/register", (req, res, next) => {
 app.use("/contact", (req, res, next) => {
     res.render("contact", null);
 });
+
 // Internal pages, these do not have a view
 app.use("/internal/register", require("./routes/register.js"));
 app.use("/internal/login", require("./routes/login.js"));
 
 // On next fallthrough, aka errors
 app.use((err, req, res, next) => {
-    res.render("error", {message: err.message, test: ["mooi","123","oke"]});
+    res.render("error", { message: err.message });
 });
 
 
