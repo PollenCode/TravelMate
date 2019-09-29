@@ -20,14 +20,21 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const homePage = require("./routes/home.js");
+const homePage = require("./routes/index.js");
 const registerPage = require("./routes/register.js");
 const loginPage = require("./routes/login.js");
 
 app.use("/", homePage);
-app.use("/home", homePage);
-app.use("/register", registerPage);
-app.use("/login", loginPage);
+app.use("/index", (req, res, next) => {
+    res.render("index");
+});
+app.use("/createAccount", (req, res, next) => {
+    res.render("createAccount");
+});
+// 
+app.use("/api/v1/register", registerPage);
+app.use("/api/v1/login", loginPage);
+// On next fallthrough
 app.use((err, req, res, next) => {
     res.render("error", {message: err.message, test: ["mooi","123","oke"]});
 });
