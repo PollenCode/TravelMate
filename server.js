@@ -13,6 +13,8 @@ mongoose.connect("mongodb://localhost/travelmate", (err, data) => {
     }
 });
 
+global.appRoot = path.resolve(__dirname);
+
 const app = express();
 app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "twig");
@@ -20,21 +22,21 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const homePage = require("./routes/index.js");
-const registerPage = require("./routes/register.js");
-const loginPage = require("./routes/login.js");
 
-app.use("/", homePage);
-app.use("/index", (req, res, next) => {
-    res.render("index");
+
+// Actual pages with views in './views'
+const indexPage = require("./routes/index.js");
+app.use("/", indexPage);
+app.use("/home", indexPage);
+app.use("/register", (req, res, next) => {
+    res.sendFile(path.join(appRoot, "views", "register.html"));
 });
-app.use("/createAccount", (req, res, next) => {
-    res.render("createAccount");
-});
-// 
-app.use("/api/v1/register", registerPage);
-app.use("/api/v1/login", loginPage);
-// On next fallthrough
+
+// Internal pages, these do not have a view
+app.use("/internal/register", require("./routes/register.js"));
+app.use("/internal/login", require("./routes/login.js"));
+
+// On next fallthrough, aka errors
 app.use((err, req, res, next) => {
     res.render("error", {message: err.message, test: ["mooi","123","oke"]});
 });
