@@ -9,7 +9,7 @@ ul.nav {
 }
 
 li {
-	float: left;
+	float: right;
 }
 
 li a {
@@ -21,7 +21,7 @@ li a {
 }
 
 li.logo {
-	float: right;
+	float: left;
 	margin: 8px 5px 5px 5px;
 }
 
