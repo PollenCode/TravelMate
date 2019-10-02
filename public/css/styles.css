@@ -66,3 +66,18 @@ header {
 	margin: 0px 0px 5px 0px;
 	padding: 0px;
 }
+
+input[type="submit"] {
+	background-color: yellow;
+}
+
+div form input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
