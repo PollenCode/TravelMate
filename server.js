@@ -47,6 +47,9 @@ app.get("/register", (req, res, next) => {
 app.get("/login", (req, res, next) => {
     res.render("login", null);
 });
+app.get("/loginframe", (req, res, next) => {
+    res.render("loginframe", null);
+});
 app.get("/contact", (req, res, next) => {
     res.render("contact", null);
 });
