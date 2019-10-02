@@ -162,6 +162,13 @@ input {
 	top: 100px;
 }
 
+.container-login{
+	position: absolute;
+	left: 30%;
+	right: 30%;
+	top: 70px;
+}
+
 footer {
   position: fixed;
   left: 0;
