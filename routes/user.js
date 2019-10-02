@@ -3,9 +3,25 @@ const router = express.Router();
 const userModel = require("../models/userModel");
 const salter = require("../salter");
 const passport = require("passport");
+const util = require("util");
 
 router.post("/register", (req, res, next) => {
     req.errorPage = "register";
+
+    console.log(util.inspect(req.body));
+
+    if (!res.body.email ||
+        !res.body.password)
+    {
+        return next(new Error("Please enter all required fields"));
+    }
+
+    if (!res.body.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/igm))
+    {
+        return next(new Error("Please enter a valid email"));
+    }
+       
+
     console.log("Finding user...");
     userModel.findOne({ email: req.body.email }, (err, user) =>
     {
