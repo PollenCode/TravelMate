@@ -82,7 +82,7 @@ input[type=submit]:hover {
   font-weight: bold;
 }
 
-input {
+input, textarea {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -94,7 +94,14 @@ input {
 
 .container{
 	position: absolute;
-	left: 15%;
-	right: 15%;
+	left: 25%;
+	right: 25%;
 	top: 100px;
+}
+
+form input[type="text"], form textarea {
+	border: 1px solid grey;
+	border-style: groove;
+	border-radius: 5px;
+
 }
