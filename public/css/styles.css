@@ -145,7 +145,7 @@ input[type=submit]:hover {
   font-weight: bold;
 }
 
-input {
+input, textarea {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -157,11 +157,12 @@ input {
 
 .container{
 	position: absolute;
-	left: 15%;
-	right: 15%;
+	left: 25%;
+	right: 25%;
 	top: 100px;
 }
 
+<<<<<<< HEAD
 .container-login{
 	position: absolute;
 	left: 30%;
@@ -169,6 +170,15 @@ input {
 	top: 70px;
 }
 
+=======
+<<<<<<< HEAD
+form input[type="text"], form textarea {
+	border: 1px solid grey;
+	border-style: groove;
+	border-radius: 5px;
+
+=======
+>>>>>>> 9d3ca3a78b4ad55d29ca296015b81226b2cc0712
 footer {
   position: fixed;
   left: 0;
@@ -177,4 +187,5 @@ footer {
   background-color: #1f1f1d ;
   color: white;
   text-align: left;
+>>>>>>> 11d7412d36b8f11cbadfda7e5a0f604f840ddb7c
 }
