@@ -63,7 +63,7 @@ header {
 	margin: 0px 20%;
 }
 
-.error-box h1,h2,h3,h4,h5,h6 {
+h1.error-box, h2.error-box, h3.error-box, h4.error-box, h5.error-box, h6.error-box {
 	color: darkred;
 	margin: 0px 0px 5px 0px;
 	padding: 0px;
