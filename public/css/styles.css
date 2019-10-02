@@ -9,6 +9,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+p.center {
+	text-align: center;
+}
+
 ul.nav {
 	overflow: hidden;
 	background-color: #1f1f1d;
@@ -36,6 +40,64 @@ img.logo {
 	width: 200px;
 }
 
+div.banner {
+	width: 100%;
+	height: 300px;
+	margin-bottom: 200px;
+}
+
+div.banner.banner-map{
+	background-image: url("/img/location.png");
+}
+
+div.banner.banner-bus{
+	background-image: url(/img/bus.jpg);
+	background-position: left -500px;
+}
+
+div.banner .banner-card-left {
+	background-color: #000000bd;
+	height: 100%;
+	width: 500px;
+}
+
+div.banner .banner-card-left p {
+	margin-left: 10px;
+	color: #eeeeee;
+}
+
+div.banner .banner-card-left h2 {
+	margin-left: 10px;
+	color: #eeeeee;
+	padding-top: 10px;
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+div.banner .banner-card-right {
+	background-color: #000000bd;
+	height: 100%;
+	width: 500px;
+	float: right;
+}
+
+div.banner .banner-card-right p {
+	margin-left: 10px;
+	color: #eeeeee;
+}
+
+div.banner .banner-card-right h2 {
+	margin-left: 10px;
+	color: #eeeeee;
+	padding-top: 10px;
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+div.banner.banner-carpool{
+	background-image: url("/img/carpooling.jpg");
+	background-position: center -200px;
+}
+
 li a:hover {
 	background-color: #503838;
 	letter-spacing: 1px;
@@ -44,6 +106,7 @@ li a:hover {
 
 h1 {
 	text-align: center;
+	margin: 15px;
 }
 
 
@@ -97,4 +160,14 @@ input {
 	left: 15%;
 	right: 15%;
 	top: 100px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1f1f1d ;
+  color: white;
+  text-align: left;
 }
