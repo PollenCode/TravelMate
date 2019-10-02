@@ -47,23 +47,25 @@
 			{{errorMessage}}
 		</div>
 	{% endif %}
-	<div>
+	<div class="container">
 		<h1>Registreer</h1>
 		<form method="POST" onsubmit="return doPasswordCheck(this);" action="/api/user/register">
+			Voornaam: <input type="text" name="firstname" placeholder="voornaam">
+			Naam: <input type="text" name="lastname" placeholder="naam">
 			Email: <input type="text" name="email" placeholder="email">
-			Password: <input type="password" name="password" placeholder="password">
-			<!--Voornaam: <input type="text" name="firstname">
-			Naam: <input type="text" name="lastname">
-			Geboortedatum: <input type="text" name="dateOfBirth">
-			Wachtwoord: <input class="password-check" type="text" name="password">
-			Wachtwoord Bevestigen: <input class="password-check-test" type="text" name="repassword">
-			Email: <input type="text" name="email">-->
+			Wachtwoord: <input type="password" name="password" placeholder="wachtwoord">
+			Wachtwoord bevestigen: <input class="password-check-test" type="text" name="repassword" placeholder="wachtwoord bevestigen">
+			Geboortedatum: <input type="date">			
 			<input type="submit" value="Registreer">
 		</form>
 	</div>
 	
-	<footer>
-
-	</footer>
+	<div class="footer">
+	<p><i class="fas fa-phone-square-alt"></i> Telefoon:</p>
+			<p>Maandag - Vrijdag 8u - 16u30</p>
+			<p><i class="fas fa-envelope-square"></i> E-mail:</p>
+			<p><i class="fab fa-snapchat"></i> Snapchat:</p>
+			<p><i class="fab fa-facebook"></i> facebook:</p>
+	</div>
 </body>
 </html>

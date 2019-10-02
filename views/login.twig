@@ -31,10 +31,14 @@
 			{{errorMessage}}
 		</div>
 	{% endif %}
-    <form method="POST" action="/api/user/login">
-        Email: <input type="text" name="email" placeholder="email">
-        Password: <input type="password" name="password" placeholder="password">
-        <input type="submit" value="Login">
-    </form>
+    
+    <div class="container-login">
+        <h1>Login</h1>
+        <form method="POST" action="/api/user/login">
+            Email: <input type="text" name="email" placeholder="email">
+            Password: <input type="password" name="password" placeholder="password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
 </body>
 </html>

@@ -1,5 +1,16 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
+}
+
+p.center {
+	text-align: center;
 }
 
 ul.nav {
@@ -29,25 +40,78 @@ img.logo {
 	width: 200px;
 }
 
-li a:hover {
-	background-color: #503838;
-	transition: 0.1s;
+div.banner {
+	width: 100%;
+	height: 300px;
+	margin-bottom: 200px;
 }
 
-li a:active {
+div.banner.banner-map{
+	background-image: url("/img/location.png");
+}
+
+div.banner.banner-bus{
+	background-image: url(/img/bus.jpg);
+	background-position: left -500px;
+}
+
+div.banner .banner-card-left {
+	background-color: #000000bd;
+	height: 100%;
+	width: 500px;
+}
+
+div.banner .banner-card-left p {
+	margin-left: 10px;
+	color: #eeeeee;
+}
+
+div.banner .banner-card-left h2 {
+	margin-left: 10px;
+	color: #eeeeee;
+	padding-top: 10px;
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+div.banner .banner-card-right {
+	background-color: #000000bd;
+	height: 100%;
+	width: 500px;
+	float: right;
+}
+
+div.banner .banner-card-right p {
+	margin-left: 10px;
+	color: #eeeeee;
+}
+
+div.banner .banner-card-right h2 {
+	margin-left: 10px;
+	color: #eeeeee;
+	padding-top: 10px;
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+div.banner.banner-carpool{
+	background-image: url("/img/carpooling.jpg");
+	background-position: center -200px;
+}
+
+li a:hover {
 	background-color: #503838;
+	letter-spacing: 1px;
+	transition: 0.1s;
 }
 
 h1 {
 	text-align: center;
+	margin: 15px;
 }
 
 
 header {
 	background-color: #1f1f1d;
-	margin-top: -16px;
-	margin-left: -8px;
-	margin-right: -8px;
 }
 
 .box {
@@ -62,8 +126,64 @@ header {
 	margin: 0px 20%;
 }
 
-.error-box h1,h2,h3,h4,h5,h6 {
+h1.error-box, h2.error-box, h3.error-box, h4.error-box, h5.error-box, h6.error-box {
 	color: darkred;
 	margin: 0px 0px 5px 0px;
 	padding: 0px;
+}
+
+input[type="submit"] {
+	background-color: yellow;
+	padding: 15px 20px;
+	transition: 250ms;
+}
+
+input[type=submit]:hover {
+  background-color: yellow;
+  transition: 250ms;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.container{
+	position: absolute;
+	left: 25%;
+	right: 25%;
+	top: 100px;
+}
+
+
+.footer {
+	position: absolute;
+	bottom: 0px
+	left: 0px;
+	right: 0px;
+	top: 90%;
+
+}
+
+form input[type="text"],form input[type="password"], form input[type="date"], form textarea {
+	border: 1px solid grey;
+	border-style: groove;
+	border-radius: 5px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1f1f1d ;
+  color: white;
+  text-align: left;
 }
