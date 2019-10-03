@@ -162,14 +162,17 @@ input, textarea {
 	top: 100px;
 }
 
-.container-login{
+
+.footer {
 	position: absolute;
-	left: 30%;
-	right: 30%;
-	top: 70px;
+	bottom: 0px
+	left: 0px;
+	right: 0px;
+	top: 90%;
+
 }
 
-form input[type="text"], form textarea {
+form input[type="text"],form input[type="password"], form input[type="date"], form textarea {
 	border: 1px solid grey;
 	border-style: groove;
 	border-radius: 5px;
@@ -185,9 +188,11 @@ footer {
   text-align: left;
 }
 
+
 button.styled {
 	background-color: yellow;
 	transition: 250ms;
 	letter-spacing: 5px;
 	font-weight: bold;
 }
+
