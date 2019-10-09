@@ -19,7 +19,7 @@
 			<li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
  		</ul>
 	</header>
-	<div class="container-home">
+	<div>
 		<h1>Welkom bij TravelMate{% if displayName != null %}, {{displayName}}{% endif %}!</h1>	
 		<p class="center">Welkom bij Travelmate. DE site om af te spreken met (nieuwe) vrienden, collega's samen te reizen.</p>
 		<div class="container">
@@ -37,31 +37,27 @@
 		{% endif %}
     		<div class="container-login">
        			<form method="POST" action="/api/user/login">
-            	Email: <input type="text" name="email" placeholder="email">
-            	Password: <input type="password" name="password" placeholder="password">
-            	<input type="submit" value="Login">
-        	</form>
+            		Email: <input type="text" name="email" placeholder="email">
+            		Password: <input type="password" name="password" placeholder="password">
+            		<input type="submit" value="Login">
+        		</form>
     		</div>
 		</div>
-		<div class="banner banner-map">
-			<div class="banner-card-right">
-				<h2>Makkelijk</h2>
-				<p>Handig afspreken om naar dezelfde locatie te reizen. Voeg een locatie en een tijdstip toe en zie met wie je samen kan reizen.</p>	
+		<div class="container-home">
+			<div class="cards">
+				<h2>Makkelijk</h2>	
+				<p>Handig afspreken om naar dezelfde locatie te reizen. Voeg een locatie en een tijdstip toe en zie met wie je samen kan reizen.</p>
 			</div>
-		</div>
-		<div class="banner banner-bus">
-			<div class="banner-card-left">
+			<div class="cards">
 				<h2>Openbaar vervoer</h2>
 				<p>Makkelijk aanduiden welke bus, tram of trein je pakt.</p>	
+				<h2><i class="fas fa-bus"></i> BUS</h2>
 			</div>
-		</div>
-		<div class="banner banner-carpool">
-			<div class="banner-card-right">
+			<div class="cards">
 				<h2>Carpoolen</h2>
 				<p>Carpoolen is nog nooit zo makkelijk geweest. Duid een bestemming aan en zie met wie je kan meerijden.</p>
 			</div>
-		</div>
-	</div>
+		</div>		
  	<footer>
  		
  	</footer>
