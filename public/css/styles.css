@@ -164,12 +164,9 @@ input, textarea {
 
 
 .footer {
-	position: absolute;
-	bottom: 0px
-	left: 0px;
-	right: 0px;
-	top: 90%;
-
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
 }
 
 form input[type="text"],form input[type="password"], form input[type="date"], form textarea {
