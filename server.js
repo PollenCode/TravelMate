@@ -47,9 +47,6 @@ app.get("/register", (req, res, next) => {
 app.get("/login", (req, res, next) => {
     res.render("login", null);
 });
-app.get("/loginframe", (req, res, next) => {
-    res.render("loginframe", null);
-});
 app.get("/contact", (req, res, next) => {
     res.render("contact", null);
 });
@@ -68,7 +65,7 @@ app.use("/api/user", require("./routes/user")); // Contains register, login, me,
 app.use((err, req, res, next) => {
 
     var message = err.message;
-    var title = "Error!"
+    var title = "Error!";
 
     var i = message.indexOf(":");
     if (i >= 0)
@@ -76,7 +73,7 @@ app.use((err, req, res, next) => {
         title = message.substring(0, i);
         message = message.substring(i + 1);
     }
-    message = message || "No description"
+    message = message || "No description";
 
     console.log(util.format("[Error/%s] %s", title, message));
 
