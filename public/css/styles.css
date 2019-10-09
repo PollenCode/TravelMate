@@ -156,10 +156,10 @@ input, textarea {
 }
 
 .container{
-	margin-left: 25%;
-	margin-right: 25%;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	position: absolute;
+	left: 25%;
+	right: 25%;
+	top: 100px;
 }
 
 
@@ -175,18 +175,9 @@ form input[type="text"],form input[type="password"], form input[type="date"], fo
 	border-radius: 5px;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #1f1f1d ;
-  color: white;
-  text-align: left;
+button.styled {
+	background-color: yellow;
+	transition: 250ms;
+	letter-spacing: 5px;
+	font-weight: bold;
 }
-
-div.container-home {
-	display: flex;
-	flex-direction: column;
-}
-
