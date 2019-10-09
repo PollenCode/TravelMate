@@ -33,7 +33,7 @@ app.use(express.json()); // Enable json serializer
 app.use(express.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
-    req.errorPage = "error"; // Set a default error page view for every request following 
+    req.locals.errorPage = "error"; // Set a default error page view for every request following 
     next();
 });
 // Actual pages with views in './views'
@@ -80,7 +80,7 @@ app.use((err, req, res, next) => {
 
     console.log(util.format("[Error/%s] %s", title, message));
 
-    res.render(req.errorPage, { 
+    res.render(req.locals.errorPage, { 
         errorMessage: message, 
         errorMessageTitle: title 
     });
