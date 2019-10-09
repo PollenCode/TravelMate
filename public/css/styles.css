@@ -19,16 +19,23 @@ ul.nav {
 	list-style-type: none;
 }
 
-li {
+ul.nav li {
 	float: right;
 }
 
-li a {
+ul.nav li a:hover {
+	background-color: #503838;
+	letter-spacing: 1px;
+	transition: 0.1s;
+}
+
+ul.nav li a {
 	display: block;
 	text-align: center;
 	padding: 18px 18px;
 	color: #eeeeee;
 	text-decoration: none;
+	transition: 0.1s;
 }
 
 li.logo {
@@ -98,11 +105,7 @@ div.banner.banner-carpool{
 	background-position: center -200px;
 }
 
-li a:hover {
-	background-color: #503838;
-	letter-spacing: 1px;
-	transition: 0.1s;
-}
+
 
 h1 {
 	text-align: center;
