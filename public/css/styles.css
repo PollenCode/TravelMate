@@ -167,6 +167,7 @@ input, textarea {
   background-color: #f1f1f1;
   padding: 10px;
   text-align: center;
+  background-image: url(/img/doormat.png);
 }
 
 form input[type="text"],form input[type="password"], form input[type="date"], form textarea {
