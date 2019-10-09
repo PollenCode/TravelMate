@@ -6,7 +6,7 @@ const passport = require("passport");
 const util = require("util");
 
 router.post("/register", (req, res, next) => {
-    req.locals.errorPage = "register";
+    res.locals.errorPage = "register";
 
     console.log(util.inspect(req.body));
 
@@ -49,7 +49,7 @@ router.post("/register", (req, res, next) => {
 });
 
 router.post("/login", (req, res, next) => {
-    req.locals.errorPage = "login";
+    res.locals.errorPage = "login";
     passport.authenticate("local", {
         successRedirect: "/index"
     })(req, res, next);
