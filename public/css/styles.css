@@ -9,6 +9,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+body, html {
+	min-height: 100vh;
+}
+
 p.center {
 	text-align: center;
 }
@@ -167,9 +171,11 @@ input, textarea {
 
 
 footer {
-  background-color: #f1f1f1;
-  padding: 10px;
+  position: absolute;
+  background-color: #ffff00;
   text-align: center;  
+  bottom: 0px;
+  width: 100vw;
 }
 
 form input[type="text"],form input[type="password"], form input[type="date"], form textarea {
