@@ -19,10 +19,30 @@
 			<li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
  		</ul>
 	</header>
-	<div class="">
+	<div class="container-home">
 		<h1>Welkom bij TravelMate{% if displayName != null %}, {{displayName}}{% endif %}!</h1>	
 		<p class="center">Welkom bij Travelmate. DE site om af te spreken met (nieuwe) vrienden, collega's samen te reizen.</p>
-		<a href="/login"><button class="styled">Login</button></a>
+		<div class="container">
+			{% if errorMessage != null %}
+			<div class="error-box box">
+				<h3>
+					{% if errorMessageTitle != null %}
+						{{errorMessageTitle}}
+					{% else %}
+						Error!
+					{% endif %}
+				</h3>
+				{{errorMessage}}
+			</div>
+		{% endif %}
+    		<div class="container-login">
+       			<form method="POST" action="/api/user/login">
+            	Email: <input type="text" name="email" placeholder="email">
+            	Password: <input type="password" name="password" placeholder="password">
+            	<input type="submit" value="Login">
+        	</form>
+    		</div>
+		</div>
 		<div class="banner banner-map">
 			<div class="banner-card-right">
 				<h2>Makkelijk</h2>
