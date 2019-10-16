@@ -5,6 +5,7 @@ const salter = require("./salter");
 module.exports.setupLocalLogin = function(passport) {
 
     passport.serializeUser((user, next) => {
+        console.log("user: " + user);
         next(null, user);
     });
     passport.deserializeUser((id, next) => {
