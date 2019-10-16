@@ -9,7 +9,6 @@ var connection = mysql.createConnection({
   password: "8vyD3SR=_uGa5!s*jcXTbFzaV",
   database: "travelmate"
 });
- 
 
 module.exports.setupLocalLogin = function(passport) {
 
@@ -57,5 +56,5 @@ module.exports.setupLocalLogin = function(passport) {
         }));
     });
 
-    passport.use("local", localLogin);
+    passport.use("localLogin", localLogin);
 };
