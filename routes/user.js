@@ -51,7 +51,7 @@ router.post("/register", (req, res, next) => {
 router.post("/login", (req, res, next) => {
     req.errorPage = "login";
     passport.authenticate("local", {
-        successRedirect: "/index"
+        successRedirect: "/map"
     })(req, res, next);
 });
 
