@@ -12,6 +12,7 @@
 	<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
+	<div id='map'></div>
 	<script>
 		  mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZXN0aXgiLCJhIjoiY2sxN2xoYjloMWRpbTNucDNneWU4Y3piMCJ9.zAJbMIgcDUtRF99YYvpaOg';
 		  var map = new mapboxgl.Map({
@@ -19,7 +20,6 @@
 		    style: 'mapbox://styles/mapbox/streets-v11'
 		  });
 	</script>
-	<div id='map'></div>
 	<div class="dropdown">
   		<button class="dropbtn"><i class="fas fa-ellipsis-h"></i></button>
   		<div class="dropdown-content">
