@@ -208,6 +208,7 @@ input, textarea {
 footer {
   position: absolute;
   background-color: #333333;
+  color: #eeeeee;
   text-align: center;  
   bottom: 0px;
   width: 100vw;
