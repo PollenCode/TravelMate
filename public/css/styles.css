@@ -225,6 +225,6 @@ form input[type="text"],form input[type="password"], form input[type="date"], fo
 }
 
 div#map{
-	width: 100%;
-	
+	width: 500px;
+	height: 500px;
 }
