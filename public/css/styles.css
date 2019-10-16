@@ -220,4 +220,7 @@ form input[type="text"],form input[type="password"], form input[type="date"], fo
 	border-radius: 5px;
 }
 
-
+div#map{
+	width: 100%;
+	
+}
