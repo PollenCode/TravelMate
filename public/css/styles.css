@@ -210,12 +210,24 @@ input, textarea {
 
 
 footer {
-  position: absolute;
-  background-color: #333333;
-  color: #eeeeee;
-  text-align: center;  
-  bottom: 0px;
-  width: 100vw;
+	position: absolute;
+	text-align: center;
+	background-color: #333333;
+	color: #eeeeee;  
+	bottom: 0px;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.footer {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	align-items: center;
+	background-color: #333333;
+	color: #eeeeee;
+	width: 100%;
+	margin-top: 20px;
 }
 
 form input[type="text"],form input[type="password"], form input[type="date"], form textarea {
