@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
 	<meta charset="UTF-8">
 	<title>map</title>
 </head>
 <body>
-	<div class="containerMap">	
-	</div>
+		<div id='map' style='width: 400px; height: 300px;'></div>
+			<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZXN0aXgiLCJhIjoiY2sxN2xoYjloMWRpbTNucDNneWU4Y3piMCJ9.zAJbMIgcDUtRF99YYvpaOg';
+			var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/streets-v11'
+			});
+			</script>
+		</div>
 	<div class="containerSearch">	
 	</div>
 </body>
