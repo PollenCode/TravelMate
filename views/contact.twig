@@ -22,13 +22,13 @@
 
 		<div class="container">
 			<h1>Contact TravelMate</h1>
-			<form>
+			<form method="POST" action="/api/contact">
 				Naam:
-				<input type="text" name="naam" placeholder="Naam..">
+				<input type="text" name="name" placeholder="Naam.." value="{{ persist.name }}">
 				Email:
-				<input type="text" name="email" placeholder="Email..">
+				<input type="text" name="email" placeholder="Email.." value="{{ persist.email }}">
 				Bericht:
-				<textarea id="Bericht" name="subject" placeholder="Bericht" rows="5"></textarea>
+				<textarea id="Bericht" name="message" placeholder="Bericht" rows="5" maxlength="2000">{{ persist.message }}</textarea>
 				<input type="submit" value="Submit">
 
 			</form>
