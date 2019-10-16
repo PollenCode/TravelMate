@@ -99,6 +99,19 @@ div.cards > h2 {
 	margin-right: 25%;
 }
 
+div.incards {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+div.incards > h2 {
+	display: flex;
+	flex-direction: column;
+	margin: 1%;
+	text-align: center;
+}
+
 
 
 h1 {
