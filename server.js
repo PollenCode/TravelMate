@@ -50,6 +50,9 @@ app.get("/login", (req, res, next) => {
 app.get("/contact", (req, res, next) => {
     res.render("contact", null);
 });
+app.get("/map", (req, res, next) => {
+    res.render("map", null);
+});
 app.get("/development/createError", (req, res, next) => {
     next(new Error(req.query.message));
 });
