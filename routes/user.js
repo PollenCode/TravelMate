@@ -38,7 +38,7 @@ router.post("/register", (req, res, next) => {
 
             res.json({
                 status: "ok",
-                user: fields
+                fields: fields
             });
             return;
         }));

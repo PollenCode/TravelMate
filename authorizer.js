@@ -17,11 +17,7 @@ module.exports.setupLocalLogin = function(passport) {
         next(null, user.id);
     });
     passport.deserializeUser((id, next) => {
-        console.log("deserializeUser id:" + util.inspect(id));
         if (connection.query("SELECT * FROM users WHERE id = ?", [id], (error, results, fields) => {
-            
-            console.log("deserializeUser results:" + util.inspect(results));
-            console.log("deserializeUser fields:" + util.inspect(fields));
             
             if (error)
                 return next(error);
@@ -38,7 +34,7 @@ module.exports.setupLocalLogin = function(passport) {
         passReqToCallback: true
     }, (req, email, password, next) => {
 
-        if (connection.query("SELECT passwordHash,passwordSalt FROM users WHERE email = ?", [email], (error, results, fields) => {
+        if (connection.query("SELECT * FROM users WHERE email = ?", [email], (error, results, fields) => {
 
             if (error)
                 return next(error, null);
@@ -47,22 +43,18 @@ module.exports.setupLocalLogin = function(passport) {
             if (!salter.checkPassword(password, results[0].passwordHash, results[0].passwordSalt))
                 return next(new Error("Incorrect password."));
 
-            return next(null, {
+            console.log("login: " + util.inspect(results[0]));
 
-            });
+            var userObject = {
+                password: password
+            };
+            for(var v in results[0])
+                userObject[v] = results[0][v];
+
+            console.log("userObject: " + util.inspect(userObject));
+
+            return next(null, userObject);
         }));
-        
-
-        /*userModel.findOne({ email: email }, (err, user) => {
-            if (err)
-                return next(err);  
-            if (user == null)
-                return next(new Error("User not found."));
-            if (!salter.checkPassword(password, user.passwordHash, user.passwordSalt))
-                return next(new Error("Incorrect password."));
-    
-            return next(null, user);
-        });*/
     });
 
     passport.use("local", localLogin);
