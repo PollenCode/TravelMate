@@ -2,19 +2,11 @@ const express = require("express");
 const expressSession = require("express-session");
 const path = require("path");
 const util = require("util");
-const mongoose = require("mongoose");
 const passport = require("passport");
 const cmd = require("node-cmd");
 
 const authorizer = require("./authorizer");
 authorizer.setupLocalLogin(passport);
-
-mongoose.connect("mongodb://localhost/travelmate", (err, data) => {
-    if (err)
-        console.log("Database connection failed!");
-    else
-        console.log("Database connection succeed!");
-});
 
 global.appRoot = path.resolve(__dirname);
 
