@@ -75,7 +75,7 @@ div.cards:hover {
 }
 
 div.cards > img {
-	height: 15%;
+	height: 200px;
 }
 
 div.cards > p {
@@ -97,6 +97,19 @@ div.cards > h2 {
 	margin-top: 5%;
 	margin-left: 25%;
 	margin-right: 25%;
+}
+
+div.incards {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+div.incards > h2 {
+	display: flex;
+	flex-direction: column;
+	margin: 1%;
+	text-align: center;
 }
 
 
@@ -153,8 +166,8 @@ input, textarea {
 }
 
 .container {
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 30%;
+	margin-right: 30%;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
