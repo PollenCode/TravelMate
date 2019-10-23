@@ -178,7 +178,7 @@ header {
 }
 
 .box {
-	margin: 8px;
+	margin: 8px auto;
 	padding: 4px;
 }
 
@@ -186,7 +186,8 @@ header {
 	border: 1px solid red;
 	border-radius: 8px;
 	background-color: #ffbbbb;
-	margin: 0px 20%;
+	width: 60%;
+	/* margin: 0px 20%; */
 }
 
 h1.error-box, h2.error-box, h3.error-box, h4.error-box, h5.error-box, h6.error-box {
