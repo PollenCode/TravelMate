@@ -273,3 +273,39 @@ div#map{
 	margin-left: 25%; 
 	width:75%;
 }
+
+div.containermp{
+display: flex;
+flex-direction: row;	
+}
+
+div.favoriteRoute{
+display: flex;
+flex-direction: column;	
+}
+
+div.favorite{
+display: flex;
+}
+
+div.personalInfo{
+display: flex;
+flex-grow: 0;
+flex-direction: column;	
+}
+
+div.infoP{
+display: flex;
+}
+
+div.friends{
+display: flex;
+flex-direction: column;	
+}
+
+div.friend{
+display: flex;
+}
+
+
+

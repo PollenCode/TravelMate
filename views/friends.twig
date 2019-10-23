@@ -7,7 +7,7 @@
 		<script src="https://kit.fontawesome.com/4dd0d35705.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="/css/styles.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<title>TravelMate-Contact</title>
+		<title>TravelMate-Friends</title>
 	</head>
 	<body>
 		<header>
@@ -19,27 +19,5 @@
 				<li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
  			</ul>
 		</header>
-
-		<div class="container">
-			<h1>Contact TravelMate</h1>
-			<form method="POST" action="/api/contact">
-				Naam:
-				<input type="text" name="name" placeholder="Naam.." value="{{ persist.name }}">
-				Email:
-				<input type="text" name="email" placeholder="Email.." value="{{ persist.email }}">
-				Bericht:
-				<textarea id="Bericht" name="message" placeholder="Bericht" rows="5" maxlength="2000">{{ persist.message }}</textarea>
-				<input type="submit" value="Submit">
-
-			</form>
-		</div>
-
-		<footer>
-			<p><i class="fas fa-phone-square-alt"></i> Telefoon:</p>
-			<p>Maandag - Vrijdag 8u - 16u30</p>
-			<p><i class="fas fa-envelope-square"></i> E-mail:</p>
-			<p><i class="fab fa-facebook"></i> facebook:</p>
-		</footer>
-		
 	</body>
 </html>
