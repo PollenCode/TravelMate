@@ -217,7 +217,8 @@ footer {
 	color: #eeeeee;  
 	bottom: 0px;
 	width: 100%;
-	margin-top: 20px;
+	height: 85px;
+	padding: 10px 0 0 0;
 }
 
 .footer {
@@ -235,6 +236,17 @@ form input[type="text"],form input[type="password"], form input[type="date"], fo
 	border: 1px solid grey;
 	border-style: groove;
 	border-radius: 5px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
 }
 
 div#map{

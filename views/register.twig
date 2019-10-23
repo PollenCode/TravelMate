@@ -47,11 +47,13 @@
 			{{errorMessage}}
 		</div>
 	{% endif %}
-	<div class="container">
+	<div class="form">
 		<h1>Registreer</h1>
 		<form method="POST" onsubmit="return doPasswordCheck(this);" action="/api/user/register">
-			Voornaam: <input type="text" name="firstname" placeholder="voornaam">
-			Naam: <input type="text" name="lastname" placeholder="naam">
+			<div class="row">
+				Voornaam: <input type="text" name="firstname" placeholder="voornaam">
+				Naam: <input type="text" name="lastname" placeholder="naam">
+			</div>
 			Email: <input type="text" name="email" placeholder="email">
 			Wachtwoord: <input type="password" name="password" placeholder="wachtwoord">
 			Wachtwoord bevestigen: <input class="password-check-test" type="password" name="repassword" placeholder="wachtwoord bevestigen">
