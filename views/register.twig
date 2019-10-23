@@ -50,6 +50,7 @@
 	<div class="container">
 		<h1>Registreer</h1>
 		<form method="POST" onsubmit="return doPasswordCheck(this);" action="/api/user/register">
+
 			Voornaam: <input type="text" name="firstName" placeholder="voornaam" value="{{ persist.firstName }}">
 			Naam: <input type="text" name="lastName" placeholder="naam" value="{{ persist.lastName }}">
 			Email: <input type="text" name="email" placeholder="email" value="{{ persist.email }}">

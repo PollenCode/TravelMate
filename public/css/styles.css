@@ -249,7 +249,8 @@ footer {
 	color: #eeeeee;  
 	bottom: 0px;
 	width: 100%;
-	margin-top: 20px;
+	height: 85px;
+	padding: 10px 0 0 0;
 }
 
 .footer {
@@ -269,6 +270,17 @@ form input[type="text"],form input[type="password"], form input[type="date"], fo
 	border-radius: 5px;
 }
 
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
 div#map{
 	position:absolute; 
 	top:0; 
@@ -276,3 +288,39 @@ div#map{
 	margin-left: 25%; 
 	width:75%;
 }
+
+div.containermp{
+display: flex;
+flex-direction: row;	
+}
+
+div.favoriteRoute{
+display: flex;
+flex-direction: column;	
+}
+
+div.favorite{
+display: flex;
+}
+
+div.personalInfo{
+display: flex;
+flex-grow: 0;
+flex-direction: column;	
+}
+
+div.infoP{
+display: flex;
+}
+
+div.friends{
+display: flex;
+flex-direction: column;	
+}
+
+div.friend{
+display: flex;
+}
+
+
+
