@@ -1,6 +1,4 @@
 const request = require("request");
-const util = require("util");
-const fs = require("fs");
 
 const delijnApiKey = "2a64f6a71f1f406bb38bc3c7871594c7";
 

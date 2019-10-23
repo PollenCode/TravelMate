@@ -13,11 +13,14 @@
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "mapbox-gl": "^1.4.0",
-    "mongoose": "^5.7.1",
+    "mysql": "^2.17.1",
     "node-cmd": "^3.0.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "request": "^2.88.0",
     "twig": "^1.13.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1"
   }
 }

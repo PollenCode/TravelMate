@@ -2,19 +2,11 @@ const express = require("express");
 const expressSession = require("express-session");
 const path = require("path");
 const util = require("util");
-const mongoose = require("mongoose");
 const passport = require("passport");
 const cmd = require("node-cmd");
 
 const authorizer = require("./authorizer");
-authorizer.setupLocalLogin(passport);
-
-mongoose.connect("mongodb://localhost/travelmate", (err, data) => {
-    if (err)
-        console.log("Database connection failed!");
-    else
-        console.log("Database connection succeed!");
-});
+authorizer.setupPassport(passport);
 
 global.appRoot = path.resolve(__dirname);
 
@@ -34,21 +26,28 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
     req.errorPage = "error"; // Set a default error page view for every request following 
+    req.renderOptions = {}
+    req.renderOptions.persist = {}
+
+    if (req.body)
+        req.renderOptions.persist = req.body;
+
     next();
 });
+
 // Actual pages with views in './views'
 const indexPage = require("./routes/index.js");
 app.use("/", indexPage);
 app.use("/home", indexPage);
 app.use("/index", indexPage);
 app.get("/register", (req, res, next) => {
-    res.render("register", null);
+    res.render("register", req.renderOptions);
 });
 app.get("/login", (req, res, next) => {
-    res.render("login", null);
+    res.render("login", req.renderOptions);
 });
 app.get("/contact", (req, res, next) => {
-    res.render("contact", null);
+    res.render("contact", req.renderOptions);
 });
 app.get("/map", (req, res, next) => {
     res.render("map", null);
@@ -63,6 +62,11 @@ app.post("/development/gitupdate", (req, res, next) => {
 
 // Internal pages, these do not have a view
 app.use("/api/user", require("./routes/user")); // Contains register, login, me, logout
+app.post("/api/contact", (req, res, next) => {
+
+    console.log("Contact form submitted: " + util.inspect(req.body));
+    res.render("contact", req.renderOptions);
+});
 
 // On next fallthrough, aka errors
 app.use((err, req, res, next) => {
@@ -79,11 +83,11 @@ app.use((err, req, res, next) => {
     message = message || "No description";
 
     console.log(util.format("[Error/%s] %s", title, message));
+    
+    req.renderOptions.errorMessage = message;
+    req.renderOptions.errorMessageTitle = title;
 
-    res.render(req.errorPage, { 
-        errorMessage: message, 
-        errorMessageTitle: title 
-    });
+    res.render(req.errorPage, req.renderOptions);
 });
 
 
