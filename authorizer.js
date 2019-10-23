@@ -1,17 +1,32 @@
 const LocalStrategy = require("passport-local").Strategy;
-const userModel = require("./models/userModel");
 const salter = require("./salter");
+const util = require("util");
 
-module.exports.setupLocalLogin = function(passport) {
+var mysql = require("mysql");
+var connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "8vyD3SR=_uGa5!s*jcXTbFzaV",
+  database: "travelmate"
+});
+
+function createUserFromRow(sqlResults)
+{
+    var userObject = {};
+    for(var v in sqlResults[0])
+        userObject[v] = sqlResults[0][v];
+    return userObject;
+}
+
+module.exports.setupPassport = function(passport) {
 
     passport.serializeUser((user, next) => {
-        console.log("user: " + user);
-        next(null, user);
+        next(null, user.id);
     });
     passport.deserializeUser((id, next) => {
-        userModel.findById(id, (err, user) => {
-            next(err, user);
-        });
+        if (connection.query("SELECT * FROM users WHERE id = ?", [id], (error, results, fields) => {
+            return next(null, createUserFromRow(results));
+        }));
     });
 
     const localLogin = new LocalStrategy({
@@ -20,17 +35,61 @@ module.exports.setupLocalLogin = function(passport) {
         passReqToCallback: true
     }, (req, email, password, next) => {
 
-        userModel.findOne({ email: email }, (err, user) => {
-            if (err)
-                return next(err);  
-            if (user == null)
+        if (connection.query("SELECT * FROM users WHERE email = ?", [email], (error, results, fields) => {
+
+            if (error)
+                return next(error, null);
+            if (results.length != 1)
                 return next(new Error("User not found."));
-            if (!salter.checkPassword(password, user.passwordHash, user.passwordSalt))
+            if (!salter.checkPassword(password, results[0].passwordHash, results[0].passwordSalt))
                 return next(new Error("Incorrect password."));
-    
-            return next(null, user);
-        });
+
+            return next(null, createUserFromRow(results));
+        }));
     });
 
-    passport.use("local", localLogin);
+    /*const localFastLogin = new LocalStrategy({
+        usernameField: "email",
+        passwordField: "pinHash",
+        passReqToCallback: true
+    }, (req, email, pinHash, next) => {
+        TODO log in with passcode
+    });*/
+
+    const localRegister = new LocalStrategy({
+        usernameField: "email",
+        passwordField: "password",
+        passReqToCallback: true
+    }, (req, email, password, next) => {
+
+        if (connection.query("SELECT * FROM users WHERE email = ?", [email], (error, results, fields) => {
+
+            if (error)
+                return next(error);
+            if (results.length != 0)
+                return next(new Error("A user with this email already exists."));
+    
+            const hashedPassword = salter.hashPasswordWithRandomSalt(req.body.password);
+            var userRecord = [req.body.email, hashedPassword.hashed, hashedPassword.withSalt, req.body.firstName, req.body.lastName];
+    
+            if (connection.query("INSERT INTO users(email,passwordHash,passwordSalt,firstName,lastName) VALUES(?,?,?,?,?)", userRecord, (error, results, fields) => {
+
+                if (error)
+                    return next(error);
+    
+                if (connection.query("SELECT * FROM users WHERE id = ?", [results.insertId], (error, results, fields) => {
+
+                    if (error)
+                        return next(error);
+                    if (results.length != 1)
+                        return new Error("Could not gather user information.");
+
+                    return next(null, createUserFromRow(results));
+                }));
+            }));
+        }));
+    });
+
+    passport.use("localLogin", localLogin);
+    passport.use("localRegister", localRegister);
 };
