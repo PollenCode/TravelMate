@@ -13,6 +13,9 @@
 </head>
 <body>
 	<div id='map'>
+		<div class="searchmenu">
+  			<p>BOLDEM</p>
+  		</div>
 		<div class="dropdown">
   		<button class="dropbtn"><i class="fas fa-ellipsis-h"></i></button>
   			<div class="dropdown-content">
@@ -22,6 +25,9 @@
   			</div>
 		</div>
 	</div>
+	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'>
+	</script>
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
 	<script>
 		  mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZXN0aXgiLCJhIjoiY2sxN2xoYjloMWRpbTNucDNneWU4Y3piMCJ9.zAJbMIgcDUtRF99YYvpaOg';
 		  var map = new mapboxgl.Map({
@@ -30,6 +36,11 @@
 		    center: [4.4699 , 50.50399],
 			zoom: 7.2
 		  });
+
+		  map.addControl(new MapboxGeocoder({
+		  accessToken: mapboxgl.accessToken,
+ 		  mapboxgl: mapboxgl
+		  }));
 	</script>
 	<div class="containerSearch">	
 	</div>

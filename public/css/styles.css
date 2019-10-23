@@ -112,6 +112,14 @@ div.incards > h2 {
 	text-align: center;
 }
 
+div.searchmenu {
+	position: absolute;
+	z-index: 1;
+	background-color: #333333;
+	height: 100%;
+	width: 25%;
+}
+
 button.dropbtn {
 	font-size: 35px;
 	border: none;
@@ -125,10 +133,6 @@ button.dropbtn {
 	right: 0.5%;
 }
 
-div.dropdown {
- 	
-}
-
 div.dropdown-content {
   display: block;
   background-color: #333333;
@@ -137,7 +141,7 @@ div.dropdown-content {
   z-index: 1;
   right: -14%;
   position: absolute;
-  transition: 0.5s;
+  transition: 0.3s;
   height: 100%;
 }
 
@@ -152,10 +156,10 @@ div.dropdown-content a {
 div.dropdown-content a:hover {
 	background-color: #3e92cc;
 	letter-spacing: 1px;
-	transition: 0.5s;
+	transition: 0.3s;
 }
 
-div.dropdown:hover .dropdown-content, div.dropdown .dropdown-content:hover {
+div.dropdown:active .dropdown-content, div.dropdown .dropdown-content:hover {
 	display: block;
 	right: 0%;
 }
@@ -247,7 +251,8 @@ form input[type="text"],form input[type="password"], form input[type="date"], fo
 }
 
 div#map{
-	width: 100vw;
-	height: 100vh;
-
+	position:absolute; 
+	top:0; 
+	bottom:0; 
+	width:100%;
 }
