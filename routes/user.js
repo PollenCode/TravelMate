@@ -32,7 +32,7 @@ router.post("/register", (req, res, next) => {
 
 router.post("/login", (req, res, next) => {
     req.errorPage = "login";
-    passport.authenticate("local", {
+    passport.authenticate("localLogin", {
         successRedirect: "/map"
     })(req, res, next);
 });

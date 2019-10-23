@@ -69,7 +69,7 @@ module.exports.setupPassport = function(passport) {
             if (results.length != 0)
                 return next(new Error("A user with this email already exists."));
     
-            const hashedPassword = salter.hashPasswordWithRandomSalt(req.body.password);
+            const hashedPassword = salter.hashPasswordWithRandomSalt(password);
             var userRecord = [req.body.email, hashedPassword.hashed, hashedPassword.withSalt, req.body.firstName, req.body.lastName];
     
             if (connection.query("INSERT INTO users(email,passwordHash,passwordSalt,firstName,lastName) VALUES(?,?,?,?,?)", userRecord, (error, results, fields) => {

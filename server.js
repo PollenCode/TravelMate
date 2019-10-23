@@ -83,8 +83,7 @@ app.use((err, req, res, next) => {
     message = message || "No description";
 
     console.log(util.format("[Error/%s] %s", title, message));
-    console.log("renderOptions: " + util.inspect(req.renderOptions));
-
+    
     req.renderOptions.errorMessage = message;
     req.renderOptions.errorMessageTitle = title;
 
