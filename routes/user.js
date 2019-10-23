@@ -26,7 +26,7 @@ router.post("/register", (req, res, next) => {
        
     req.errorPage = "register";
     passport.authenticate("localRegister", {
-        successRedirect: "/index"
+        successRedirect: "/map"
     })(req, res, next);
 });
 
