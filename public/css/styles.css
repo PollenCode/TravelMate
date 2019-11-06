@@ -380,7 +380,7 @@ border-bottom: 1px solid;
 div.friendslist ul {
   list-style-type: none;
   padding: 0;
-  margin: 0px	200px;
+  margin: 50px	200px;
 }
 
 div.friendslist ul li {
@@ -388,4 +388,13 @@ div.friendslist ul li {
   margin-top: -1px;
   background-color: #f6f6f6;
   padding: 12px;
+}
+
+.addfriend {
+	margin: 0px 400px;
+	display: flex;
+}
+
+.addfriend input[type="submit"] {
+	width: 20%;
 }
