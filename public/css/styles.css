@@ -135,7 +135,7 @@ button#dropbtn {
 #geocoder {
 	position:absolute;
 	z-index:2;
-	width:70%;
+	width:23%;
 	padding-left: 10px;
 	top:20px;
 }
@@ -144,43 +144,28 @@ button#dropbtn {
 	min-width:100%; 	
 }
 
-div#outer{
+#map-dropdown{
+
+}
+#map-dropdown-btn {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	padding: 10px;
+}
+#map-dropdown #map-dropdown-menu {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	background-color: gray;
+	width: 0px;
 	overflow: hidden;
+	transition: width 200ms;
 }
-
-div#dropdown{
-
-}
-
-div#dropdown-content {
-  display: block;
-  background-color: #333333;
-  min-width: 240px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0#2);
-  z-index: 1;
-  right: -20%;
-  position: absolute;
-  transition: 0#3s;
-  height: 100%;
-}
-
-div#dropdown-content a {
-  color: #f1f1f1;
-  background-color: #333333;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-div#dropdown-content a:hover {
-	background-color: #3e92cc;
-	letter-spacing: 1px;
-	transition: 0#3s;
-}
-
-div#dropdown:active #dropdown-content, div#dropdown #dropdown-content:hover {
-	display: block;
-	right: 0%;
+#map-dropdown-btn:active + #map-dropdown-menu, #map-dropdown #map-dropdown-menu:hover {
+	width: 300px;
+	transition: width 200ms;
 }
 
 h1 {
