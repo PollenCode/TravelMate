@@ -1,3 +1,4 @@
+// create a function to make a directions request
 function getRoute(end) {
   // make a directions request using cycling profile
   // an arbitrary start will always be the same
