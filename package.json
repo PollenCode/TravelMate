@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "mapbox-gl": "^1.4.0",
+    "moment": "^2.24.0",
     "mysql": "^2.17.1",
     "node-cmd": "^3.0.0",
     "passport": "^0.4.0",

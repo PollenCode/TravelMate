@@ -8,22 +8,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/styles.css">
 	<title>TravelMate - Register</title>
-	<script>
-	
-		function doPasswordCheck(form)
-		{
-			var check = form.querySelector(".password-check");
-			var checkTest = form.querySelector(".password-check-test");
-			var valid = check.value == checkTest.value
-
-			console.info("check: " + check.value);
-			console.info("checkTest: " + checkTest.value);
-
-			console.info(valid ? "gelijk" : "ongelijk");
-
-			return check.value == checkTest.value;
-		}
-	</script>
 </head>
 <body>
  	<header>
@@ -34,10 +18,12 @@
  			<li><a href="/index">Home <i class="fas fa-home"></i></a></li>
 			<li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
  		</ul>
-	 </header>
-	 {% if errorMessage != null %}
+	</header>
+	<div class="container">
+		{% if errorMessage != null %}
 		<div class="error-box box">
-			<h3>
+			<h3 class="error-box-title">
+				<i class="fas fa-exclamation-triangle"></i>
 				{% if errorMessageTitle != null %}
 					{{errorMessageTitle}}
 				{% else %}
@@ -46,26 +32,28 @@
 			</h3>
 			{{errorMessage}}
 		</div>
-	{% endif %}
-	<div class="container">
+		{% endif %}
 		<h1>Registreer</h1>
-		<form method="POST" onsubmit="return doPasswordCheck(this);" action="/api/user/register">
-
-			Voornaam: <input type="text" name="firstName" placeholder="voornaam" value="{{ persist.firstName }}">
-			Naam: <input type="text" name="lastName" placeholder="naam" value="{{ persist.lastName }}">
-			Email: <input type="text" name="email" placeholder="email" value="{{ persist.email }}">
-			Wachtwoord: <input type="password" name="password" placeholder="wachtwoord">
-			Wachtwoord bevestigen: <input class="password-check-test" type="password" name="passwordCheck" placeholder="wachtwoord bevestigen">
-			Geboortedatum: <input type="date" name="dateOfBirth" value="{{ persist.dateOfBirth }}">			
+		<form method="POST" onsubmit="return checkForm('register')" action="/api/user/register">
+			<label>Voornaam:</label><input {% if "firstName" in problems %}class="input-problem"{% endif %} type="text" name="firstName" placeholder="Johnny" value="{{ persist.firstName }}">
+			<label>Naam:</label><input {% if "lastName" in problems %}class="input-problem"{% endif %} type="text" name="lastName" placeholder="Appleseed" value="{{ persist.lastName }}">
+			<label>Email:</label><input {% if "email" in problems %}class="input-problem"{% endif %} type="text" name="email" placeholder="someone@example.com" value="{{ persist.email }}">
+			<label>Wachtwoord:</label><input {% if "password" in problems %}class="input-problem"{% endif %} id="input-password" type="password" name="password" placeholder="secret">
+			<label>Wachtwoord bevestigen:</label><input {% if "passwordCheck" in problems %}class="input-problem"{% endif %} id="input-password-check" type="password" name="passwordCheck" placeholder="type the same">
+			<label>Geboortedatum:</label><input {% if "dateOfBirth" in problems %}class="input-problem"{% endif %} type="date" name="dateOfBirth" value="{{ persist.dateOfBirth }}">			
 			<input type="submit" value="Registreer">
 		</form>
 	</div>
-	
-	<footer>
-		<p><i class="fas fa-phone-square-alt"></i> Telefoon:</p>
-		<p>Maandag - Vrijdag 8u - 16u30</p>
-		<p><i class="fas fa-envelope-square"></i> E-mail:</p>
-		<p><i class="fab fa-facebook"></i> facebook:</p>
-	</footer>
+
+	<img id="page-loading-indicator" src="/img/loading.svg" disabled="true">
+	<div id="screen-fader" disabled="true"></div>
+	<script src="/js/travelmate-base.js"></script>
 </body>
 </html>
+<!-- 
+<svg>
+	<path fill="#333" d="M4.4 4.4l.8.8c2.1-2.1 5.5-2.1 7.6 0l.8-.8c-2.5-2.5-6.7-2.5-9.2 0z"></path>
+	<path opacity=".1" d="M12.8 12.9c-2.1 2.1-5.5 2.1-7.6 0-2.1-2.1-2.1-5.5 0-7.7l-.8-.8c-2.5 2.5-2.5 6.7 0 9.2s6.6 2.5 9.2 0 2.5-6.6 0-9.2l-.8.8c2.2 2.1 2.2 5.6 0 7.7z"></path>
+</svg>
+
+ -->

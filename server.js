@@ -28,6 +28,7 @@ app.use((req, res, next) => {
     req.errorPage = "error"; // Set a default error page view for every request following 
     req.renderOptions = {}
     req.renderOptions.persist = {}
+    req.renderOptions.problems = []
 
     if (req.body)
         req.renderOptions.persist = req.body;
@@ -50,13 +51,13 @@ app.get("/contact", (req, res, next) => {
     res.render("contact", req.renderOptions);
 });
 app.get("/map", (req, res, next) => {
-    res.render("map", null);
+    res.render("map", req.renderOptions);
 });
 app.get("/account", (req, res, next) => {
-    res.render("account", null);
+    res.render("account", req.renderOptions);
 });
 app.get("/friends", (req, res, next) => {
-    res.render("friends", null);
+    res.render("friends", req.renderOptions);
 });
 app.get("/development/createError", (req, res, next) => {
     next(new Error(req.query.message));
@@ -92,6 +93,8 @@ app.use((err, req, res, next) => {
     
     req.renderOptions.errorMessage = message;
     req.renderOptions.errorMessageTitle = title;
+
+    console.log("Renderoptions: " + util.inspect(req.renderOptions));
 
     res.render(req.errorPage, req.renderOptions);
 });

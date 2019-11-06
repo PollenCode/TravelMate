@@ -149,23 +149,7 @@ div.searchmenu {
 	margin: 10px;
 	list-style: none;
 }
-#screen-fader {
-	background-color: #1117;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	z-index: 2;
-	transition: 200ms;
-	opacity: 0;
-	pointer-events: none;
-}
-#screen-fader:not([disabled]) {
-	transition: 800ms;
-	opacity: 1;
-	pointer-events: all;
-}
+
 
 
 #map-dropdown-btn:active + #map-dropdown-menu, #map-dropdown #map-dropdown-menu:hover {
@@ -247,14 +231,14 @@ header {
 	border: 1px solid red;
 	border-radius: 8px;
 	background-color: #ffbbbb;
-	margin: 0px 20%;
+	/* margin: 0px 20%; */
 }
 
-h1.error-box, h2.error-box, h3.error-box, h4.error-box, h5.error-box, h6.error-box {
+.error-box .error-box-title {
 	color: darkred;
 	margin: 0px 0px 5px 0px;
 	padding: 0px;
-}
+} 
 
 input[type="submit"] {
 	background-color: #f07915;
@@ -280,14 +264,14 @@ input, textarea {
 }
 
 .container {
-	margin-left: 30%;
-	margin-right: 30%;
+	margin-left: 25%;
+	margin-right: 25%;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
 
-footer {
+/*footer {
 	position: absolute;
 	text-align: center;
 	background-color: #333333;
@@ -307,7 +291,7 @@ footer {
 	color: #eeeeee;
 	width: 100%;
 	margin-top: 20px;
-}
+}*/
 
 form input[type="text"],form input[type="password"], form input[type="date"], form textarea {
 	border: 1px solid grey;
@@ -423,4 +407,66 @@ div.friendslist ul li {
 
 .addfriend input[type="submit"] {
 	width: 20%;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: #fff2f2;
+	padding: 20px;
+	border: 1px dashed #ddd;
+	border-radius: 10px;
+	margin: 10px 0px;
+}
+form label {
+	width: 27%;
+	text-align: left;
+	font-weight: bold;
+	word-spacing: 100vw;
+}
+form input, form textarea {
+	width: 73%;
+}
+form textarea {
+	resize: vertical;
+	min-height: 2em;
+}
+form input[type="submit"] {
+	width: 100%;
+}
+
+form input.input-problem, form textarea.input-problem {
+	border: 2px solid #f00e;
+	background-color: #fdd;
+}
+
+#page-loading-indicator {
+	position: fixed;
+	left: 47%;
+	top: 47%;
+	width: 6%;
+	height: 6%;
+	z-index: 10;
+	display: none;
+}
+#page-loading-indicator[disabled="false"] {
+	display: block;
+}
+#screen-fader {
+	background-color: #111;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	transition: 300ms;
+	opacity: 0;
+	pointer-events: none;
+}
+#screen-fader[disabled="false"] {
+	transition: 150ms;
+	opacity: 0.7;
+	pointer-events: all;
 }

@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<script src="https://kit.fontawesome.com/4dd0d35705.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" type="text/css" href="/css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<title>TravelMate-Contact</title>
-	</head>
-	<body>
-		<header>
-			<ul class="nav">
- 				<li><a href="/contact">Contact <i class="fas fa-address-book"></i></a></li>
- 				<li><a href="/login">Inloggen <i class="fas fa-user-circle"></i></a></li>
- 				<li><a href="/register">Registreren <i class="far fa-user-circle"></i></a></li>
- 				<li><a href="/index">Home <i class="fas fa-home"></i></a></li>
-				<li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
- 			</ul>
-		</header>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://kit.fontawesome.com/4dd0d35705.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<title>TravelMate-Contact</title>
+</head>
+<body>
+	<header>
+		<ul class="nav">
+			<li><a href="/contact">Contact <i class="fas fa-address-book"></i></a></li>
+			<li><a href="/login">Inloggen <i class="fas fa-user-circle"></i></a></li>
+			<li><a href="/register">Registreren <i class="far fa-user-circle"></i></a></li>
+			<li><a href="/index">Home <i class="fas fa-home"></i></a></li>
+			<li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
+		</ul>
+	</header>
 
-		<div class="container">
-			<h1>Contact TravelMate</h1>
-			<form method="POST" action="/api/contact">
-				Naam:
-				<input type="text" name="name" placeholder="Naam.." value="{{ persist.name }}">
-				Email:
-				<input type="text" name="email" placeholder="Email.." value="{{ persist.email }}">
-				Bericht:
-				<textarea id="Bericht" name="message" placeholder="Bericht" rows="5" maxlength="2000">{{ persist.message }}</textarea>
-				<input type="submit" value="Submit">
+	<div class="container">
+		<h1>Contact TravelMate</h1>
+		<form method="POST" onsubmit="return checkForm('contact')" action="/api/contact">
+			<label>Naam:</label><input type="text" name="name" placeholder="Naam.." value="{{ persist.name }}">
+			<label>Email:</label><input type="text" name="email" placeholder="Email.." value="{{ persist.email }}">
+			<label>Bericht:</label><textarea id="Bericht" name="message" placeholder="Bericht" rows="5" maxlength="2000">{{ persist.message }}</textarea>
+			<input type="submit" value="Submit">
 
-			</form>
-		</div>
+		</form>
+	</div>
 
-		<footer>
-			<p><i class="fas fa-phone-square-alt"></i> Telefoon:</p>
-			<p>Maandag - Vrijdag 8u - 16u30</p>
-			<p><i class="fas fa-envelope-square"></i> E-mail:</p>
-			<p><i class="fab fa-facebook"></i> facebook:</p>
-		</footer>
-		
-	</body>
+	<img id="page-loading-indicator" src="/img/loading.svg" disabled="true">
+	<div id="screen-fader" disabled="true"></div>
+	<script src="/js/travelmate-base.js"></script>
+</body>
 </html>

@@ -19,32 +19,30 @@
             <li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
         </ul>
     </header>
-    {% if errorMessage != null %}
-		<div class="error-box box">
-			<h3>
-				{% if errorMessageTitle != null %}
-					{{errorMessageTitle}}
-				{% else %}
-					Error!
-				{% endif %}
-			</h3>
-			{{errorMessage}}
-		</div>
-	{% endif %}
-      
     <div class="container">
+        {% if errorMessage != null %}
+        <div class="error-box box">
+            <h3 class="error-box-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                {% if errorMessageTitle != null %}
+                    {{errorMessageTitle}}
+                {% else %}
+                    Error!
+                {% endif %}
+            </h3>
+            {{errorMessage}}
+        </div>
+        {% endif %}
         <h1>Login</h1>
-        <form method="POST" action="/api/user/login">
-            Email: <input type="text" name="email" placeholder="email">
-            Password: <input type="password" name="password" placeholder="password">
+        <form method="POST" onsubmit="return checkForm('login')" action="/api/user/login">
+            <label>Email:</label><input type="text" name="email" placeholder="someone@example.com">
+            <label>Password:</label><input type="password" name="password" placeholder="secret">
             <input type="submit" value="Login">
         </form>
     </div>
-    <footer>
-        <p><i class="fas fa-phone-square-alt"></i> Telefoon:</p>
-        <p>Maandag - Vrijdag 8u - 16u30</p>
-        <p><i class="fas fa-envelope-square"></i> E-mail:</p>
-        <p><i class="fab fa-facebook"></i> facebook:</p>
-    </footer>
+
+    <img id="page-loading-indicator" src="/img/loading.svg" disabled="true">
+	<div id="screen-fader" disabled="true"></div>
+	<script src="/js/travelmate-base.js"></script>
 </body>
 </html>

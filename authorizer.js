@@ -1,6 +1,7 @@
 const LocalStrategy = require("passport-local").Strategy;
 const salter = require("./salter");
 const util = require("util");
+const moment = require("moment");
 
 var mysql = require("mysql");
 var connection = mysql.createConnection({
@@ -70,9 +71,11 @@ module.exports.setupPassport = function(passport) {
                 return next(new Error("A user with this email already exists."));
     
             const hashedPassword = salter.hashPasswordWithRandomSalt(password);
-            var userRecord = [req.body.email, hashedPassword.hashed, hashedPassword.withSalt, req.body.firstName, req.body.lastName];
-    
-            if (connection.query("INSERT INTO users(email,passwordHash,passwordSalt,firstName,lastName) VALUES(?,?,?,?,?)", userRecord, (error, results, fields) => {
+            var currentDateTime = moment().format("DD-MM-YYYY hh:mm:ss");
+            var dateOfBirth = moment(req.body.dateOfBirth, "YYYY-MM-DD").format("DD-MM-YYYY");
+            var userRecord = [req.body.email, hashedPassword.hashed, hashedPassword.withSalt, req.body.firstName, req.body.lastName, dateOfBirth, currentDateTime, ""];
+
+            if (connection.query("INSERT INTO users(email,passwordHash,passwordSalt,firstName,lastName,dateOfBirth,dateOfRegister,friendIds) VALUES(?,?,?,?,?,?,?,?)", userRecord, (error, results, fields) => {
 
                 if (error)
                     return next(error);
