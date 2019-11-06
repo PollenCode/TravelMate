@@ -5,7 +5,6 @@
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
 	background-color: #fbfbfb;
 }
 
@@ -156,27 +155,6 @@ div.searchmenu {
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-#map-dropdown-btn:active + #map-dropdown-menu, #map-dropdown #map-dropdown-menu:hover {
-	width: 300px;
-	transition: width 200ms;
-}
-
-#map-dropdown-btn {
-	position: absolute;
-	right: 5px;
-	top: 5px;
-	padding: 10px;
-}
-#map-dropdown #map-dropdown-menu {
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	height: 100%;
-	background-color: gray;
-	width: 0px;
-	overflow: hidden;
-	transition: width 200ms;
-}
 #map-dropdown-btn:active + #map-dropdown-menu, #map-dropdown #map-dropdown-menu:hover {
 	width: 300px;
 	transition: width 200ms;
