@@ -266,13 +266,15 @@ div#map{
 div#containeracc{
 display: flex;
 flex-direction: row;
-justify-content:space-around;	
+justify-content:space-around;
+height:92vh;	
 }
 
 div#favoriteRoute{
 display: flex;
 flex-direction: column;
-border-right-style: solid;	
+border-right-style: solid;
+border-right-color: #333333;	
 width: 100px; 
 height:100px;
 margin: auto;
@@ -280,14 +282,13 @@ justify-content:space-around;
 flex: 1;	
 text-align: center;
 min-height:100%;
+background-color: #f6f6f6;
 }
 
 div.favorite{
 display: flex;
 margin: 0px 20px;
-border-bottom: 1px solid ;
-
-
+border-bottom: 1px solid #333333;
 }
 
 div#personalInfo{
@@ -300,18 +301,21 @@ justify-content:space-around;
 flex: 2;
 text-align: center;
 min-height:100%;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #fbfbfb;
 }
 
 div.infoP{
 display: flex;
 margin: 0px 20px;
-border-bottom: 1px solid ;
+border-bottom: 1px solid #333333 ;
 }
 
 div#friends{
 display: flex;
 flex-direction: column;
-border-left-style: solid;	
+border-left-style: solid ;
+border-left-color: #333333;	
 width: 100px; 
 height:100px;
 margin: auto;
@@ -319,12 +323,13 @@ justify-content:space-around;
 flex: 1;
 text-align: center;
 min-height:100%;
+background-color: #f6f6f6;
 }
 
 div.friend{
 display: flex;
 margin: 0px 20px;
-border-bottom: 1px solid;
+border-bottom: 1px solid #333333;
 }
 
 div.friendslist ul {
