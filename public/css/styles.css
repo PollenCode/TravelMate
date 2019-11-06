@@ -143,11 +143,6 @@ button.dropbtn {
 .mapboxgl-ctrl-geocoder { 
 	min-width:100%; 	
 }
-
-div.outer{
-	overflow: hidden;
-}
-
 /*div.dropdown{
 
 }
