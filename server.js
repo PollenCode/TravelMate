@@ -52,6 +52,12 @@ app.get("/contact", (req, res, next) => {
 app.get("/map", (req, res, next) => {
     res.render("map", null);
 });
+app.get("/account", (req, res, next) => {
+    res.render("account", null);
+});
+app.get("/friends", (req, res, next) => {
+    res.render("friends", null);
+});
 app.get("/development/createError", (req, res, next) => {
     next(new Error(req.query.message));
 });
