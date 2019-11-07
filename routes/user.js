@@ -177,7 +177,7 @@ function setFriendListRenderOptions(req, res, next, callback)
                     return next(error);
         
                 for(var i = 0; i < results3.length; i++)
-                    friends.push(createUserFromRow(results3));
+                    friends.push(createUserFromRow(results3[i]));
 
                     // Finally render the friend list
                     req.renderOptions.pendingFriendRequests = pendingFriendRequests;

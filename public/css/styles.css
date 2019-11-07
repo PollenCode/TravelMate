@@ -116,6 +116,12 @@ div.searchmenu {
 	background-color: #333333;
 	height: 100%;
 	width: 25%;
+	padding-top: 5rem;
+	padding-left: 0.5rem;
+}
+
+div.searchmenu h2 {
+	color: white;
 }
 
 .geocoder {
