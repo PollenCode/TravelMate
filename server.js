@@ -54,11 +54,11 @@ app.get("/contact", (req, res, next) => {
 });
 app.get("/map", (req, res, next) => {
     req.errorPage = "login";
-    if (req.user == null)
+    /*if (req.user == null)
     {
         req.renderOptions.redirect = encodeURI("/map");
         return next(new Error("User is not logged in."));
-    }
+    }*/
     res.render("map", req.renderOptions);
 });
 app.get("/development/createError", (req, res, next) => {
