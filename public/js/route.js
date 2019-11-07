@@ -1,5 +1,4 @@
-/*var start = [-122.662323, 45.523751];
-
+// create a function to make a directions request
 function getRoute(end) {
   // make a directions request using cycling profile
   // an arbitrary start will always be the same
@@ -56,9 +55,6 @@ function getRoute(end) {
   req.send();
 }
 
-// create a function to make a directions request
-
-
 map.on('load', function() {
   // make an initial directions request that
   // starts and ends at the same location
@@ -90,52 +86,3 @@ map.on('load', function() {
   });
   // this is where the code from the next step will go
 });
-
-map.on('click', function(e) {
-  var coordsObj = e.lngLat;
-  canvas.style.cursor = '';
-  var coords = Object.keys(coordsObj).map(function(key) {
-    return coordsObj[key];
-  });
-  var end = {
-    type: 'FeatureCollection',
-    features: [{
-      type: 'Feature',
-      properties: {},
-      geometry: {
-        type: 'Point',
-        coordinates: coords
-      }
-    }
-    ]
-  };
-  if (map.getLayer('end')) {
-    map.getSource('end').setData(end);
-  } else {
-    map.addLayer({
-      id: 'end',
-      type: 'circle',
-      source: {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: [{
-            type: 'Feature',
-            properties: {},
-            geometry: {
-              type: 'Point',
-              coordinates: coords
-            }
-          }]
-        }
-      },
-      paint: {
-        'circle-radius': 10,
-        'circle-color': '#f30'
-      }
-    });
-  }
-  getRoute(coords);
-});
-
-*/
