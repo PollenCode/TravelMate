@@ -233,21 +233,33 @@ header {
 	background-color: #ffbbbb;
 	/* margin: 0px 20%; */
 }
-
 .error-box .error-box-title {
 	color: darkred;
 	margin: 0px 0px 5px 0px;
 	padding: 0px;
 } 
+.success-box {
+	border: 1px solid green;
+	border-radius: 8px;
+	background-color: #8f8;
+	/* margin: 0px 20%; */
+}
+.success-box .success-box-title {
+	color: darkgreen;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+} 
 
-input[type="submit"] {
+input[type="submit"], .btn {
 	background-color: #f07915;
 	color: white;
 	padding: 15px 20px;
 	transition: 250ms;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, button:hover {
   transition: 250ms;
   letter-spacing: 1px;
   font-weight: bold;
@@ -258,8 +270,6 @@ input, textarea {
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
 	box-sizing: border-box;
 }
 
@@ -390,7 +400,7 @@ border-bottom: 1px solid #333333;
 div.friendslist ul {
   list-style-type: none;
   padding: 0;
-  margin: 50px	200px;
+  margin: 50px 0px;
 }
 
 div.friendslist ul li {
@@ -400,14 +410,14 @@ div.friendslist ul li {
   padding: 12px;
 }
 
-.addfriend {
+/*.addfriend {
 	margin: 0px 400px;
 	display: flex;
 }
 
 .addfriend input[type="submit"] {
 	width: 20%;
-}
+}*/
 
 form {
 	display: flex;
@@ -423,7 +433,7 @@ form label {
 	width: 27%;
 	text-align: left;
 	font-weight: bold;
-	word-spacing: 100vw;
+	/* word-spacing: 100vw; */
 }
 form input, form textarea {
 	width: 73%;
@@ -469,4 +479,38 @@ form input.input-problem, form textarea.input-problem {
 	transition: 150ms;
 	opacity: 0.7;
 	pointer-events: all;
+}
+/*.collapsible h2::before {
+	content: "+";
+	padding: 5px;
+	font-size: 1.2em; 
+}*/
+
+#collapse-add-friend {
+	border: 1px solid #ddd;
+	background-color: #f6f6f6;
+	border-radius: 5px;
+	padding: 12px; 
+}
+
+.collapse-btn {
+	background-color: #3e92cc;
+	color: white;
+	padding: 5px 15px;
+	transition: 250ms;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+[collapsed="true"] {
+	max-height: 0px;
+	opacity: 0;
+	transition: 500ms cubic-bezier(0,1,0,1);
+	overflow: hidden; 
+}
+
+[collapsed="false"] {
+	opacity: 1;
+	max-height: 70vh;
+	transition: 500ms;
 }

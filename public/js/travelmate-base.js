@@ -5,7 +5,8 @@ function checkForm(type)
     const formCheckers = {
         register: checkRegisterForm,
         login: checkLoginForm,
-        contact: checkContactForm
+        contact: checkContactForm,
+        addFriend: checkAddFriendForm
     }
     
     var result;
@@ -54,8 +55,31 @@ function checkContactForm()
     return true;
 }
 
+function checkAddFriendForm()
+{
+    return true;
+}
+
 function setPageLoading(loading) 
 {
     document.getElementById("screen-fader").setAttribute("disabled", !loading);
     document.getElementById("page-loading-indicator").setAttribute("disabled", !loading);
+}
+
+window.addEventListener("load", (ev) => {
+    setPageLoading(false);
+});
+
+function toggleCollapsible(colapsible) 
+{
+    var el = document.getElementById(colapsible);
+    var val = el.getAttribute("collapsed");
+    if (val == null || val == "true")
+    {
+        el.setAttribute("collapsed", "false");
+    }
+    else
+    {
+        el.setAttribute("collapsed", "true");
+    }
 }

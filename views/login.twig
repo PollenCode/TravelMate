@@ -34,15 +34,15 @@
         </div>
         {% endif %}
         <h1>Login</h1>
-        <form method="POST" onsubmit="return checkForm('login')" action="/api/user/login">
+        <form method="POST" onsubmit="return checkForm('login')" action="/api/user/login{% if redirect != null %}?redir={{ redirect }}{% endif %}">
             <label>Email:</label><input type="text" name="email" placeholder="someone@example.com">
             <label>Password:</label><input type="password" name="password" placeholder="secret">
             <input type="submit" value="Login">
         </form>
     </div>
 
-    <img id="page-loading-indicator" src="/img/loading.svg" disabled="true">
-	<div id="screen-fader" disabled="true"></div>
+    <img id="page-loading-indicator" src="/img/loading.svg" disabled="false">
+	<div id="screen-fader" disabled="false"></div>
 	<script src="/js/travelmate-base.js"></script>
 </body>
 </html>

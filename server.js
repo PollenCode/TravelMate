@@ -29,7 +29,9 @@ app.use((req, res, next) => {
     req.renderOptions = {}
     req.renderOptions.persist = {}
     req.renderOptions.problems = []
-
+    req.queryRedirect = null;
+    if (req.query && req.query["redir"])
+        req.queryRedirect = decodeURI(req.query["redir"]);
     if (req.body)
         req.renderOptions.persist = req.body;
 
@@ -51,13 +53,13 @@ app.get("/contact", (req, res, next) => {
     res.render("contact", req.renderOptions);
 });
 app.get("/map", (req, res, next) => {
+    req.errorPage = "login";
+    if (req.user == null)
+    {
+        req.renderOptions.redirect = encodeURI("/map");
+        return next(new Error("User is not logged in."));
+    }
     res.render("map", req.renderOptions);
-});
-app.get("/account", (req, res, next) => {
-    res.render("account", req.renderOptions);
-});
-app.get("/friends", (req, res, next) => {
-    res.render("friends", req.renderOptions);
 });
 app.get("/development/createError", (req, res, next) => {
     next(new Error(req.query.message));

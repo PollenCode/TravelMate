@@ -1,37 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<script src="https://kit.fontawesome.com/4dd0d35705.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" type="text/css" href="/css/styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<title>TravelMate-Friends</title>
-	</head>
-	<body>
-		<header>
-			<ul class="nav">
- 				<li><a href="/contact">Contact <i class="fas fa-address-book"></i></a></li>
- 				<li><a href="/login">Inloggen <i class="fas fa-user-circle"></i></a></li>
- 				<li><a href="/register">Registreren <i class="far fa-user-circle"></i></a></li>
- 				<li><a href="/index">Home <i class="fas fa-home"></i></a></li>
-				<li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
- 			</ul>
-		</header>
-		<h1>Friend's list</h1>
-		
-		<div class="addfriend">
-			<input type="text" name="name" placeholder="Naam..">
-			<input type="submit" value="Add">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://kit.fontawesome.com/4dd0d35705.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<title>TravelMate-Friends</title>
+</head>
+<body>
+	<header>
+		<ul class="nav">
+			<li><a href="/contact">Contact <i class="fas fa-address-book"></i></a></li>
+			<li><a href="/login">Inloggen <i class="fas fa-user-circle"></i></a></li>
+			<li><a href="/register">Registreren <i class="far fa-user-circle"></i></a></li>
+			<li><a href="/index">Home <i class="fas fa-home"></i></a></li>
+			<li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
+		</ul>
+	</header>
+	<div class="container">
+		{% if errorMessage != null %}
+		<div class="error-box box">
+			<h3 class="error-box-title">
+				<i class="fas fa-exclamation-triangle"></i>
+				{% if errorMessageTitle != null %}
+					{{errorMessageTitle}}
+				{% else %}
+					Error!
+				{% endif %}
+			</h3>
+			{{errorMessage}}
 		</div>
+		{% endif %}
+		{% if successMessage != null %}
+		<div class="success-box box">
+			<h3 class="success-box-title">
+				<i class="fas fa-check-circle"></i>
+				{% if successMessageTitle != null %}
+					{{successMessageTitle}}
+				{% else %}
+					Success!
+				{% endif %}
+			</h3>
+			{{successMessage}}
+		</div>
+		{% endif %}
 
+		<h1>Friend list</h1>
+		<button class="collapse-btn" onclick="toggleCollapsible('collapse-add-friend')"><span class="collapse-icon"><i class="fas fa-user-plus"></i></span>Add friend</button>
+		<form method="POST" action="/api/user/addFriend" onsubmit="return checkForm('addFriend')" id="collapse-add-friend" collapsed="true">
+			<label>Friend's exact email: </label><input type="text" name="friendEmail" placeholder="bv. gerrit@example.com">
+			<input type="submit" value="Add">
+		</form>
 		<div class="friendslist">
 			<ul>
-				<li><img src="/img/avatar.jpg" style="width: 40px"> Stijn</li>
-				<li>Dylan</li>
-				<li>Robbe</li>
+				<li><img src="/img/avatar.jpg" style="width: 40px"> You</li>
+				{% if incomingFriendRequests|length > 0 %}
+					<li><h2>Incoming</h2></li>
+					{% for incoming in incomingFriendRequests %}
+						<li>{{ incoming }}</li>
+					{% endfor %}
+				{% else %}
+					<li>You have no incoming friend requests.</li>
+				{% endif %}
+
+				{% if friends|length > 0 %}
+					<li><h2>Friends</h2></li>
+					{% for friend in friends %}
+						<li>{{ friend }}</li>
+					{% endfor %}
+				{% else %}
+					<li>You have no friends.</li>
+				{% endif %}
+
+				{% if pendingFriendRequests|length > 0 %}
+					<li><h2>Pending</h2></li>
+					{% for pending in pendingFriendRequests %}
+						<li>{{ pending }}</li>
+					{% endfor %}
+				{% else %}
+					<li>You have no pending friend requests.</li>
+				{% endif %}
 			</ul>
 		</div>
-	</body>
+	</div>
+
+	<img id="page-loading-indicator" src="/img/loading.svg" disabled="false">
+	<div id="screen-fader" disabled="false"></div>
+	<script src="/js/travelmate-base.js"></script>
+</body>
 </html>

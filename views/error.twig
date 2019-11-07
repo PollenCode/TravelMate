@@ -15,15 +15,22 @@
             <li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
         </ul>
     </header>
+    {% if errorMessage != null %}
     <div class="error-box box">
-        <h3>
+        <h3 class="error-box-title">
+            <i class="fas fa-exclamation-triangle"></i>
             {% if errorMessageTitle != null %}
                 {{errorMessageTitle}}
             {% else %}
-            Oops, there was a problem!
+                Error!
             {% endif %}
         </h3>
         {{errorMessage}}
     </div>
+    {% endif %}
+    
+    <img id="page-loading-indicator" src="/img/loading.svg" disabled="false">
+	<div id="screen-fader" disabled="false"></div>
+	<script src="/js/travelmate-base.js"></script>
 </body>
 </html>
