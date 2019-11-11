@@ -38,6 +38,21 @@ app.use((req, res, next) => {
     next();
 });
 
+const ensureLoginPages = ["/api/user/friends","/api/user/addFriend","/api/user/acceptFriend","/api/user/removeFriend","/api/user/me","/map"];
+
+app.use((req, res, next) => {
+
+    if (!req.user && ensureLoginPages.includes(req.path))
+    {
+        req.renderOptions.loginRedirect = encodeURI(req.url);
+        res.render("login", req.renderOptions);
+    }
+    else
+    {
+        next();
+    }
+});
+
 // Actual pages with views in './views'
 const indexPage = require("./routes/index.js");
 app.use("/", indexPage);
@@ -53,12 +68,6 @@ app.get("/contact", (req, res, next) => {
     res.render("contact", req.renderOptions);
 });
 app.get("/map", (req, res, next) => {
-    req.errorPage = "login";
-    /*if (req.user == null)
-    {
-        req.renderOptions.redirect = encodeURI("/map");
-        return next(new Error("User is not logged in."));
-    }*/
     res.render("map", req.renderOptions);
 });
 app.get("/development/createError", (req, res, next) => {
@@ -96,7 +105,7 @@ app.use((err, req, res, next) => {
     req.renderOptions.errorMessage = message;
     req.renderOptions.errorMessageTitle = title;
 
-    console.log("Renderoptions: " + util.inspect(req.renderOptions));
+    // console.log("Renderoptions: " + util.inspect(req.renderOptions));
 
     res.render(req.errorPage, req.renderOptions);
 });

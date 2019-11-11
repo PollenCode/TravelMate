@@ -5,6 +5,7 @@ const passport = require("passport");
 const util = require("util");
 const moment = require("moment");
 const bcrypt = require("bcrypt");
+const query = require("../query");
 
 var mysql = require("mysql");
 var connection = mysql.createConnection({
@@ -85,68 +86,54 @@ router.get("/me", (req, res, next) => {
     }
 });
 
-router.post("/addFriend", (req, res, next) => {
-    req.errorPage = "login";
-    if (req.user == null)
-    {
-        req.renderOptions.redirect = encodeURI("/api/user/friends");
-        return next(new Error("User is not logged in."));
-    }
-    req.errorPage = "friends";
+router.post("/removeFriend", (req, res, next) => {
+  //TODO
+});
 
-    var fnext = function(err) {
-        next(err);
-    };
+router.post("/acceptFriend", (req, res, next) => {
+  //TODO
+});
+
+router.post("/addFriend", (req, res, next) => {
+
+    req.errorPage = "friends";
 
     var friendEmail = req.body.friendEmail;
     if (!friendEmail)
         return next(new Error("Email missing: No valid friend email was specified."));
 
-    setFriendListRenderOptions(req, res, next, () => {
-        connection.query("SELECT * FROM users WHERE email = ?", [friendEmail], (error, results, fields) => {
-
-            if (error)
-                return next(error);
-            if (results.length == 0)
-                return next(new Error("Not found: Nobody with email " + friendEmail + " was found. Please check if the email is correct."));
-    
-            var userRecord = [req.user.id, req.user.email, results[0].id, results[0].email];
-            var fullDisplayName = results[0].firstName + " " + results[0].lastName;
-    
-            connection.query("SELECT id FROM friend_requests WHERE (senderId = ? AND receiverId = ?) OR (receiverId = ? AND senderId = ?)", [req.user.id, results[0].id, req.user.id, results[0].id], (error, results2, fields) => {
-                
-                if (error)
-                    return next(error);
-                if (results2.length > 0)
-                    return next(new Error("Duplicate: A friend request was already sent to (or received from) " + fullDisplayName + "."));
-    
-                connection.query("INSERT INTO friend_requests(senderId,senderEmail,receiverId,receiverEmail) VALUES(?,?,?,?)", userRecord, (error, results3, fields) => {
-            
-                    if (error)
-                        return next(error);
-    
-                    req.renderOptions.successMessage = "Friend request was send to " + fullDisplayName;
-                    
-                    res.render("friends", req.renderOptions);
-                });
+    query.getAllConnections(req.user.id, (incoming, pending, connections) => {
+        req.renderOptions.incomingFriendRequests = incoming;
+        req.renderOptions.pendingFriendRequests = pending;
+        req.renderOptions.friends = connections;
+        query.getUserWithEmail(friendEmail, (friendUser) => {
+            query.createConnection(req.user.id, friendUser.id, (result) => {
+                res.render("friends", req.renderOptions);
+            }, (err) => {
+                return next(err);
             });
+        }, (err) => {
+            return next(new Error("Not found: Nobody with that email was found."));
         });
+    }, (err) => {
+        return next(err);
     });
 });
 
 router.get("/friends", (req, res, next) => {
-    req.errorPage = "login";
-    if (req.user == null)
-    {
-        req.renderOptions.redirect = encodeURI("/api/user/friends");
-        return next(new Error("User is not logged in."));
-    }
   
-    setFriendListRenderOptions(req, res, next, () => {
+    query.getAllConnections(req.user.id, (incoming, pending, connections) => {
+        req.renderOptions.incomingFriendRequests = incoming;
+        req.renderOptions.pendingFriendRequests = pending;
+        req.renderOptions.friends = connections;
         res.render("friends", req.renderOptions);
+    }, (err) => {
+        return next(err);
     });
+
 });
 
+/* OBSOLETE
 function setFriendListRenderOptions(req, res, next, callback)
 {
     var pendingFriendRequests = [];
@@ -188,7 +175,7 @@ function setFriendListRenderOptions(req, res, next, callback)
             }));
         }));
     }));
-}
+}*/
 
 router.get("/logout", (req, res, next) => {
     req.logout();
@@ -205,13 +192,5 @@ router.get("/logout", (req, res, next) => {
         });
     }
 });
-
-function createUserFromRow(sqlResults)
-{
-    var userObject = {};
-    for(var v in sqlResults[0])
-        userObject[v] = sqlResults[0][v];
-    return userObject;
-}
 
 module.exports = router;
