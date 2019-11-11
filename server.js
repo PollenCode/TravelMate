@@ -41,6 +41,7 @@ app.use((req, res, next) => {
 });
 
 const ensureLoginPages = ["/api/user/friends","/api/user/addFriend","/api/user/acceptFriend","/api/user/removeFriend","/api/user/me","/map"];
+
 app.use((req, res, next) => {
 
     if (!req.user && ensureLoginPages.includes(req.path))
