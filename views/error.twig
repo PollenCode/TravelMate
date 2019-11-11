@@ -15,19 +15,18 @@
             <li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
         </ul>
     </header>
-    {% if errorMessage != null %}
+    {% for errorMessage in errorMessages %}
     <div class="error-box box">
-        <h3 class="error-box-title">
-            <i class="fas fa-exclamation-triangle"></i>
-            {% if errorMessageTitle != null %}
-                {{errorMessageTitle}}
-            {% else %}
-                Error!
-            {% endif %}
-        </h3>
+        <h3 class="error-box-title"><i class="fas fa-exclamation-triangle"></i>Error!</h3>
         {{errorMessage}}
     </div>
-    {% endif %}
+    {% endfor %}
+    {% for successMessage in successMessages %}
+    <div class="success-box box">
+        <h3 class="success-box-title"><i class="fas fa-check-circle"></i>Success!</h3>
+        {{successMessage}}
+    </div>
+    {% endfor %}
     
     <img id="page-loading-indicator" src="/img/loading.svg" disabled="false">
 	<div id="screen-fader" disabled="false"></div>

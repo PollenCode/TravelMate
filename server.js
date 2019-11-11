@@ -28,18 +28,19 @@ app.use((req, res, next) => {
     req.errorPage = "error"; // Set a default error page view for every request following 
     req.renderOptions = {}
     req.renderOptions.persist = {}
+    if (req.body)
+        req.renderOptions.persist = req.body;
+    req.renderOptions.errorMessages = [];
+    req.renderOptions.successMessages = [];
     req.renderOptions.problems = []
     req.queryRedirect = null;
     if (req.query && req.query["redir"])
         req.queryRedirect = decodeURI(req.query["redir"]);
-    if (req.body)
-        req.renderOptions.persist = req.body;
 
     next();
 });
 
 const ensureLoginPages = ["/api/user/friends","/api/user/addFriend","/api/user/acceptFriend","/api/user/removeFriend","/api/user/me","/map"];
-
 app.use((req, res, next) => {
 
     if (!req.user && ensureLoginPages.includes(req.path))
@@ -88,25 +89,9 @@ app.post("/api/contact", (req, res, next) => {
 
 // On next fallthrough, aka errors
 app.use((err, req, res, next) => {
-
-    var message = err.message;
-    var title = "Error!";
-
-    var i = message.indexOf(":");
-    if (i >= 0)
-    {
-        title = message.substring(0, i);
-        message = message.substring(i + 1);
-    }
-    message = message || "No description";
-
     console.log(util.format("[Error/%s] %s", title, message));
     
-    req.renderOptions.errorMessage = message;
-    req.renderOptions.errorMessageTitle = title;
-
-    // console.log("Renderoptions: " + util.inspect(req.renderOptions));
-
+    req.renderOptions.errorMessage.push(err.message || "No description.");
     res.render(req.errorPage, req.renderOptions);
 });
 

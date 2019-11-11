@@ -19,32 +19,18 @@
 		</ul>
 	</header>
 	<div class="container">
-		{% if errorMessage != null %}
+		{% for errorMessage in errorMessages %}
 		<div class="error-box box">
-			<h3 class="error-box-title">
-				<i class="fas fa-exclamation-triangle"></i>
-				{% if errorMessageTitle != null %}
-					{{errorMessageTitle}}
-				{% else %}
-					Error!
-				{% endif %}
-			</h3>
+			<h3 class="error-box-title"><i class="fas fa-exclamation-triangle"></i>Error!</h3>
 			{{errorMessage}}
 		</div>
-		{% endif %}
-		{% if successMessage != null %}
+		{% endfor %}
+		{% for successMessage in successMessages %}
 		<div class="success-box box">
-			<h3 class="success-box-title">
-				<i class="fas fa-check-circle"></i>
-				{% if successMessageTitle != null %}
-					{{successMessageTitle}}
-				{% else %}
-					Success!
-				{% endif %}
-			</h3>
+			<h3 class="success-box-title"><i class="fas fa-check-circle"></i>Success!</h3>
 			{{successMessage}}
 		</div>
-		{% endif %}
+        {% endfor %}
 
 		<h1>Friend list</h1>
 		<button class="collapse-btn" onclick="toggleCollapsible('collapse-add-friend')"><span class="collapse-icon"><i class="fas fa-user-plus"></i></span>Add friend</button>

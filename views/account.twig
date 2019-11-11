@@ -15,21 +15,19 @@
 				<li class="logo"><img class="logo" src="/img/travelmatelogo3.png" alt="Logo"></li>
  			</ul>
 	</header>
-	<div id="containeracc">
-		<div id="favoriteRoute"><h2>Favorite route</h2>
-			<div class="favorite"><p>weer coole route</p></div>
-			<div class="favorite"><p>coole route</p></div>
+	<div class="container">
+		{% for errorMessage in errorMessages %}
+		<div class="error-box box">
+			<h3 class="error-box-title"><i class="fas fa-exclamation-triangle"></i>Error!</h3>
+			{{errorMessage}}
 		</div>
-
-		<div id="personalInfo"><h2>Information</h2>
-			<div class="infoP"><p>Information</p></div>
-			<div class="infoP"><p>Information2</p></div>
+		{% endfor %}
+		{% for successMessage in successMessages %}
+		<div class="success-box box">
+			<h3 class="success-box-title"><i class="fas fa-check-circle"></i>Success!</h3>
+			{{successMessage}}
 		</div>
-
-		<div id="friends"><h2>Friends</h2>
-			<div class="friend"><p>Lonely</p></div>
-			<div class="friend"><p>Sukkel</p></div>
-		</div>
+        {% endfor %}
 	</div>
 
 	<img id="page-loading-indicator" src="/img/loading.svg" disabled="false">

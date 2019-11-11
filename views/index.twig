@@ -20,19 +20,18 @@
  		</ul>
 	</header>
 	<div class="container">
-		{% if errorMessage != null %}
+		{% for errorMessage in errorMessages %}
 		<div class="error-box box">
-			<h3 class="error-box-title">
-				<i class="fas fa-exclamation-triangle"></i>
-				{% if errorMessageTitle != null %}
-					{{errorMessageTitle}}
-				{% else %}
-					Error!
-				{% endif %}
-			</h3>
+			<h3 class="error-box-title"><i class="fas fa-exclamation-triangle"></i>Error!</h3>
 			{{errorMessage}}
 		</div>
-		{% endif %}
+		{% endfor %}
+		{% for successMessage in successMessages %}
+		<div class="success-box box">
+			<h3 class="success-box-title"><i class="fas fa-check-circle"></i>Success!</h3>
+			{{successMessage}}
+		</div>
+        {% endfor %}
 
 		<h1>Welkom bij TravelMate!</h1>	
 		<p class="center">Welkom bij Travelmate. DE site om af te spreken met (nieuwe) vrienden, collega's samen te reizen.</p>

@@ -20,22 +20,22 @@
         </ul>
     </header>
     <div class="container">
-        {% if errorMessage != null %}
-        <div class="error-box box">
-            <h3 class="error-box-title">
-                <i class="fas fa-exclamation-triangle"></i>
-                {% if errorMessageTitle != null %}
-                    {{errorMessageTitle}}
-                {% else %}
-                    Error!
-                {% endif %}
-            </h3>
-            {{errorMessage}}
-        </div>
-        {% endif %}
+		{% for errorMessage in errorMessages %}
+		<div class="error-box box">
+			<h3 class="error-box-title"><i class="fas fa-exclamation-triangle"></i>Error!</h3>
+			{{errorMessage}}
+		</div>
+		{% endfor %}
+		{% for successMessage in successMessages %}
+		<div class="success-box box">
+			<h3 class="success-box-title"><i class="fas fa-check-circle"></i>Success!</h3>
+			{{successMessage}}
+		</div>
+        {% endfor %}
+        
         <h1>Login</h1>
         <form method="POST" onsubmit="return checkForm('login')" action="/api/user/login{% if loginRedirect != null %}?redir={{ loginRedirect }}{% endif %}">
-            <label>Email:</label><input type="text" name="email" placeholder="someone@example.com">
+            <label>Email:</label><input type="text" name="email" placeholder="someone@example.com" value="{{ persist.email }}">
             <label>Password:</label><input type="password" name="password" placeholder="secret">
             <input type="submit" value="Login">
         </form>
