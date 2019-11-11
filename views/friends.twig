@@ -44,14 +44,14 @@
 				{% if incomingFriendRequests|length > 0 %}
 					<li><h2>Incoming friend requests</h2></li>
 					{% for incoming in incomingFriendRequests %}
-						<li>{{ incoming.email }}</li>
+						<li>{{ incoming.email }} <a href="/api/user/acceptFriend?friendConnectId={{ incoming.connectionId }}">Accept</a> <a href="/api/user/removeFriend?friendConnectId={{ incoming.connectionId }}">Remove</a></li>
 					{% endfor %}
 				{% endif %}
 
 				<li><h2>Friends</h2></li>
 				{% if friends|length > 0 %}
 					{% for friend in friends %}
-						<li><i class="fas fa-user"></i> {{ friend.email }}</li>
+						<li><i class="fas fa-user"></i> {{ friend.email }} <a href="/api/user/removeFriend?friendConnectId={{ friend.connectionId }}">Unfriend</a></li>
 					{% endfor %}
 				{% else %}
 					<li>You have no friends.</li>
@@ -60,7 +60,7 @@
 				{% if pendingFriendRequests|length > 0 %}
 					<li><h2>Pending friend requests</h2></li>
 					{% for pending in pendingFriendRequests %}
-						<li>{{ pending.email }}</li>
+						<li>{{ pending.email }} <a href="/api/user/removeFriend?friendConnectId={{ pending.connectionId }}">Remove</a></li>
 					{% endfor %}
 				{% endif %}
 			</ul>

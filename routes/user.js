@@ -86,28 +86,53 @@ router.get("/me", (req, res, next) => {
     }
 });
 
-router.post("/removeFriend", (req, res, next) => {
-  //TODO
+router.get("/removeFriend", (req, res, next) => {
+
+    query.breakConnection(req.query.friendConnectId, (result) => {
+        req.errorPage = "friends";
+        req.renderOptions.successMessages.push("Removal successful.");
+        query.getAllConnections(req.user.id, (incoming, pending, connections) => {
+            req.renderOptions.incomingFriendRequests = incoming;
+            req.renderOptions.pendingFriendRequests = pending;
+            req.renderOptions.friends = connections;
+            res.render("friends", req.renderOptions);
+        }, (err) => {
+            return next(err);
+        });
+    }, (err) => {
+        return next(err);
+    });
 });
 
-router.post("/acceptFriend", (req, res, next) => {
-  //TODO
+router.get("/acceptFriend", (req, res, next) => {
+
+    query.acceptConnection(req.query.friendConnectId, (result) => {
+        req.errorPage = "friends";
+        req.renderOptions.successMessages.push("Friend request was accepted.");
+        query.getAllConnections(req.user.id, (incoming, pending, connections) => {
+            req.renderOptions.incomingFriendRequests = incoming;
+            req.renderOptions.pendingFriendRequests = pending;
+            req.renderOptions.friends = connections;
+            res.render("friends", req.renderOptions);
+        }, (err) => {
+            return next(err);
+        });
+    }, (err) => {
+        return next(err);
+    });
 });
 
 router.post("/addFriend", (req, res, next) => {
-
     req.errorPage = "friends";
-
-    var friendEmail = req.body.friendEmail;
-    if (!friendEmail)
-        return next(new Error("Email missing: No valid friend email was specified."));
 
     query.getAllConnections(req.user.id, (incoming, pending, connections) => {
         req.renderOptions.incomingFriendRequests = incoming;
         req.renderOptions.pendingFriendRequests = pending;
         req.renderOptions.friends = connections;
-        query.getUserWithEmail(friendEmail, (friendUser) => {
+        query.getUserWithEmail(req.body.friendEmail, (friendUser) => {
             query.createConnection(req.user.id, friendUser.id, (result) => {
+                req.renderOptions.pendingFriendRequests.push(friendUser);
+                req.renderOptions.successMessages.push("Friend request was send to " + friendUser.firstName + " " + friendUser.lastName);
                 res.render("friends", req.renderOptions);
             }, (err) => {
                 return next(err);
@@ -130,52 +155,7 @@ router.get("/friends", (req, res, next) => {
     }, (err) => {
         return next(err);
     });
-
 });
-
-/* OBSOLETE
-function setFriendListRenderOptions(req, res, next, callback)
-{
-    var pendingFriendRequests = [];
-    var incomingFriendRequests = [];
-    var friends = req.user.friendIds;
-
-    if (connection.query("SELECT * FROM friend_requests WHERE receiverId = ? LIMIT 100", [req.user.id], (error, results, fields) => {
-
-        if (error)
-            return next(error);
-        if (results.length != 0)            
-            req.renderOptions.errorMessage = "You have " + results.length + " incoming friend requests.";
-
-        for(var i = 0; i < results.length; i++)
-            incomingFriendRequests.push(results[i].senderEmail);
-       
-        if (connection.query("SELECT * FROM friend_requests WHERE senderId = ? LIMIT 100", [req.user.id], (error, results2, fields) => {
-
-            if (error)
-                return next(error);
-    
-            for(var i = 0; i < results2.length; i++)
-                pendingFriendRequests.push(results2[i].receiverEmail);
-            
-            if (connection.query("SELECT * FROM users WHERE id IN (?)", [req.user.friendIds], (error, results3, fields) => {
-
-                if (error)
-                    return next(error);
-        
-                for(var i = 0; i < results3.length; i++)
-                    friends.push(createUserFromRow(results3[i]));
-
-                    // Finally render the friend list
-                    req.renderOptions.pendingFriendRequests = pendingFriendRequests;
-                    req.renderOptions.incomingFriendRequests = incomingFriendRequests;
-                    req.renderOptions.friends = friends;
-
-                    callback();
-            }));
-        }));
-    }));
-}*/
 
 router.get("/logout", (req, res, next) => {
     req.logout();

@@ -78,7 +78,7 @@ var start = [-122.662323, 45.523751];
 $(() => {
   
     var markerTemplate = $("#marker-template").html();
-    console.log(markerTemplate);
+    
     function createDlMarker(forStop)
     {
         var el = document.createElement('div');

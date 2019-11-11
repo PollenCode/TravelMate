@@ -80,7 +80,7 @@ app.post("/development/gitupdate", (req, res, next) => {
     cmd.get("git pull", (err, data, stderr) => console.log(data));
 });
 
-// Internal pages, these do not have a view
+
 app.use("/api/user", require("./routes/user")); // Contains register, login, me, logout
 app.post("/api/contact", (req, res, next) => {
 
@@ -90,9 +90,9 @@ app.post("/api/contact", (req, res, next) => {
 
 // On next fallthrough, aka errors
 app.use((err, req, res, next) => {
-    console.log(util.format("[Error/%s] %s", title, message));
+    console.log("[Error] " + req.renderOptions.errorMessages.join("\n"));
     
-    req.renderOptions.errorMessage.push(err.message || "No description.");
+    req.renderOptions.errorMessages.push(err.message || "No description.");
     res.render(req.errorPage, req.renderOptions);
 });
 
