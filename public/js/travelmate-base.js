@@ -83,3 +83,32 @@ function toggleCollapsible(colapsible)
         el.setAttribute("collapsed", "true");
     }
 }
+
+function selectTab(tabsClass, selectTabId)
+{
+    var els = document.getElementsByClassName(tabsClass);
+    
+    for(var i = 0; i < els.length; i++)
+        els[i].setAttribute("disabled", els[i].id != selectTabId);
+}
+
+var routePlanType = null;
+
+function planSelectRouteType(type)
+{
+    routePlanType = type;
+    var mapRouteCtrl = document.getElementsByClassName("mapboxgl-ctrl-directions")[0];
+
+    if (mapRouteCtrl != null && type != "car")
+        mapRouteCtrl.style.display = "none";
+    else if (mapRouteCtrl != null)
+        mapRouteCtrl.style.display = "inherit";
+
+    if (type == "car" && !mapRouteCtrl)
+    {
+        map.addControl(new MapboxDirections({
+            accessToken: mapboxgl.accessToken,
+            unit: 'metric',
+        }), 'top-left');
+    }
+}

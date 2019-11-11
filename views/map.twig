@@ -42,25 +42,50 @@
 
 	
 	<div class="searchmenu">
+		<a href="/"><img id="searchmenu-logo" src="/img/travelmatelogo3.png"></a>
 		<div id="searchmenu-content">
-			<h2>Mijn volgende route:</h2>
+			<h2>Mijn volgende route</h2>
+			<ul id="searchmenu-tabs">
+				<li onclick="selectTab('searchmenu-tab','searchmenu-tab-car'); planSelectRouteType('car');">Auto</li>
+				<li onclick="selectTab('searchmenu-tab','searchmenu-tab-ov'); planSelectRouteType('ov');">Openbaar vervoer</li>
+				<li onclick="selectTab('searchmenu-tab','searchmenu-tab-no-route'); planSelectRouteType(null);"><i class="fas fa-times"></i></li>
+			</ul>
+			<section class="searchmenu-tab" id="searchmenu-tab-car" disabled="true">
+				<h3>Auto</h3>
+				<label>Vertrek tijdstip</label>
+				<input type="time" name="route-car-go-time" value="20:00" placeholder="vertrek tijdstip">
+				<ul class="inline-radio-select" id="route-car-period-select">
+					<li><input checked type="radio" name="route-car-go-period" id="route-car-go-period-today" value="today"><label for="route-car-go-period-today">Vandaag</label></li>
+					<li><input type="radio" name="route-car-go-period" id="route-car-go-period-tomorrow" value="tomorrow"><label for="route-car-go-period-tomorrow">Morgen</label></li>
+				</ul>
+				<p>Gebruik de kaart om je route te plannen <i class="fas fa-arrow-right"></i></p>
+			</section>
+			<section class="searchmenu-tab" id="searchmenu-tab-ov" disabled="true">
+				<h3>Openbaar vervoer</h3>
+				<label>Vertrekhalte</label>
+				<div id="map-lijn-planner-geocoder1"></div>
+				<ul class="inline-radio-select" id="route-ov-period-go-type-select">
+					<li><input checked type="radio" name="route-ov-period-go-type" id="route-ov-period-go-type-arrive" value="arrive"><label for="route-ov-period-go-type-arrive">Aankomen om</label></li>
+					<li><input type="radio" name="route-ov-period-go-type" id="route-ov-period-go-type-depart" value="depart"><label for="route-ov-period-go-type-depart">Vertrekken om</label></li>
+				</ul>
+				<input type="time" name="route-ov-go-time" value="20:00" placeholder="tijdstip">
+				<ul class="inline-radio-select" id="route-ov-period-select">
+					<li><input checked type="radio" name="route-ov-go-period" id="route-ov-go-period-today" value="today"><label for="route-ov-go-period-today">Vandaag</label></li>
+					<li><input type="radio" name="route-ov-go-period" id="route-ov-go-period-tomorrow" value="tomorrow"><label for="route-ov-go-period-tomorrow">Morgen</label></li>
+				</ul>
+			</section>
+			<section class="searchmenu-tab" id="searchmenu-tab-no-route" disabled="false">
+				<h3>Geen route</h3>
+				<p>Je moet nergens heen.</p>
+				<p>Selecteer auto of openbaar vervoer hierboven om een route in te stellen.</p>
+			</section>
 		</div>
 	</div>
-  	<div id="geocoder" class="geocoder"></div>
-	<!-- 
-	<div id="map-lijn-planner">
-		<h2>Van</h2>
-		<div id="map-lijn-planner-geocoder1"></div>
-		<ul>
-			<li>Hier lijnrichting</li>
-		</ul>
-	</div> -->
-	
 
 	<div class="containerSearch">	
 	</div>
 	<div id="marker-template">
-		<i class="fas fa-map-marker"></i>
+		<i class="fas fa-map-pin"></i>
 		<div class="marker-content">
 			<p class="marker-stop-name">{stop.name} <span class="marker-stop-id">({stop.id})</span></p>
 		</div>

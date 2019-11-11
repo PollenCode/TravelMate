@@ -40,7 +40,8 @@ app.use((req, res, next) => {
     next();
 });
 
-const ensureLoginPages = ["/api/user/friends","/api/user/addFriend","/api/user/acceptFriend","/api/user/removeFriend","/api/user/me","/map"];
+//const ensureLoginPages = ["/api/user/friends","/api/user/addFriend","/api/user/acceptFriend","/api/user/removeFriend","/api/user/me","/map"];
+const ensureLoginPages = [];
 
 app.use((req, res, next) => {
 

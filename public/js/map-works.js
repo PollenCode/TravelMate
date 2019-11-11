@@ -50,7 +50,6 @@ function dlSync(url, method = "GET")
 
 function lijnGeocoder(query) 
 {
-    //https://www.delijn.be/nl/zakelijk-aanbod/reisinfodata/gebruik-onze-data.html
     var data = dlSync("https://api.delijn.be/DLZoekOpenData/v1/zoek/haltes/" + query);
     if (!data)
         return;
@@ -61,7 +60,7 @@ function lijnGeocoder(query)
         var lijn = data.haltes[i];
 
         var feature = {};
-        feature['place_name'] = lijn.omschrijving;
+        feature['place_name'] = "🚌 " + lijn.omschrijving;
         feature['center'] = {lng: lijn.geoCoordinaat.longitude, lat: lijn.geoCoordinaat.latitude};
         feature['place_type'] = ['place'];
         feature["lijn_data"] = lijn;
@@ -102,18 +101,13 @@ $(() => {
         zoom: 7.2
     });
 
-    var canvas = map.getCanvasContainer();
-    
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl
     });
-    $("#geocoder").append(geocoder.onAdd(map));
+    $("#main-geocoder").append(geocoder.onAdd(map));
 
-    map.addControl(new MapboxDirections({
-    accessToken: mapboxgl.accessToken,
-    unit: 'metric',
-    }), 'top-left');
+
 
     //https://api.delijn.be/DLZoekOpenData/v1/zoek/haltes/{zoekArgument}[?huidigePositie][&startIndex][&maxAantalHits]
 
@@ -122,7 +116,7 @@ $(() => {
         accessToken: mapboxgl.accessToken,
         localGeocoder: lijnGeocoder,
         zoom: 14,
-        placeholder: "Geeft halte",
+        placeholder: "Vertrekhalte",
         mapboxgl: mapboxgl
     });
     var el = mapLijnPlannerGeocoder1.onAdd(map);
@@ -131,7 +125,12 @@ $(() => {
         var el = document.querySelector("#map-lijn-planner-geocoder1 ul");
         el.innerHTML = "";
 
-        dl("", (data) => {}, (ex) => {});
+        var lijnData = result.result["lijn_data"];
+
+
+        console.log(lijnData);
+
+        //dl("", (data) => {}, (ex) => {});
     });
    /* var mapLijnPlannerGeocoder2 = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
