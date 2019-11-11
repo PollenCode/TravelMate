@@ -54,32 +54,27 @@
 		</form>
 		<div class="friendslist">
 			<ul>
-				<li><img src="/img/avatar.jpg" style="width: 40px"> You</li>
 				{% if incomingFriendRequests|length > 0 %}
-					<li><h2>Incoming</h2></li>
+					<li><h2>Incoming friend requests</h2></li>
 					{% for incoming in incomingFriendRequests %}
-						<li>{{ incoming }}</li>
+						<li>{{ incoming.email }}</li>
 					{% endfor %}
-				{% else %}
-					<li>You have no incoming friend requests.</li>
 				{% endif %}
 
+				<li><h2>Friends</h2></li>
 				{% if friends|length > 0 %}
-					<li><h2>Friends</h2></li>
 					{% for friend in friends %}
-						<li>{{ friend }}</li>
+						<li><i class="fas fa-user"></i> {{ friend.email }}</li>
 					{% endfor %}
 				{% else %}
 					<li>You have no friends.</li>
 				{% endif %}
 
 				{% if pendingFriendRequests|length > 0 %}
-					<li><h2>Pending</h2></li>
+					<li><h2>Pending friend requests</h2></li>
 					{% for pending in pendingFriendRequests %}
-						<li>{{ pending }}</li>
+						<li>{{ pending.email }}</li>
 					{% endfor %}
-				{% else %}
-					<li>You have no pending friend requests.</li>
 				{% endif %}
 			</ul>
 		</div>

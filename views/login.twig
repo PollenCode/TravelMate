@@ -34,7 +34,7 @@
         </div>
         {% endif %}
         <h1>Login</h1>
-        <form method="POST" onsubmit="return checkForm('login')" action="/api/user/login{% if redirect != null %}?redir={{ redirect }}{% endif %}">
+        <form method="POST" onsubmit="return checkForm('login')" action="/api/user/login{% if loginRedirect != null %}?redir={{ loginRedirect }}{% endif %}">
             <label>Email:</label><input type="text" name="email" placeholder="someone@example.com">
             <label>Password:</label><input type="password" name="password" placeholder="secret">
             <input type="submit" value="Login">
