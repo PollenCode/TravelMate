@@ -14,13 +14,12 @@ function createUserFromRow(sqlResults)
     return userObject;
 }
 
-
-module.exports.getIncomingConnections = function(user, success, error) 
+module.exports.getIncomingConnections = function(userId, success, error) 
 {
-    if (!user || !user.id)
-    return error(new Error("User is null."));
+    if (!userId)
+        return error(new Error("User is null."));
 
-    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = ? AND connections.status = 0)", [user.id], (err, results, fields) => {
+    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = ? AND connections.status = 0)", [userId], (err, results, fields) => {
         if (err)
             return error(err);
         
@@ -28,12 +27,12 @@ module.exports.getIncomingConnections = function(user, success, error)
     });
 };
 
-module.exports.getPendingConnections = function(user, success, error) 
+module.exports.getPendingConnections = function(userId, success, error) 
 {
-    if (!user || !user.id)
+    if (!userId)
         return error(new Error("User is null."));
 
-    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user2 = users.id AND connections.user1 = ? AND connections.status = 0)", [user.id], (err, results, fields) => {
+    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user2 = users.id AND connections.user1 = ? AND connections.status = 0)", [userId], (err, results, fields) => {
         if (err)
             return error(err);
 
@@ -41,12 +40,12 @@ module.exports.getPendingConnections = function(user, success, error)
     });
 };
 
-module.exports.getConnections = function(user, success, error) 
+module.exports.getConnections = function(userId, success, error) 
 {
-    if (!user || !user.id)
+    if (!userId)
         return error(new Error("User is null."));
 
-    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = ? AND connections.status = 1) OR (connections.user2 = users.id AND connections.user1 = ? AND connections.status = 1)", [user.id, user.id], (err, results, fields) => {
+    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = ? AND connections.status = 1) OR (connections.user2 = users.id AND connections.user1 = ? AND connections.status = 1)", [userId, userId], (err, results, fields) => {
         if (err)
             return error(err);
 
@@ -56,14 +55,14 @@ module.exports.getConnections = function(user, success, error)
 
 module.exports.acceptConnection = function(connectionId, success, error)
 {
-    if (connectionId)
+    if (!connectionId)
         return error(new Error("connectionId is null."));
 
-    connection.query("UPDATE connections SET status = 1 WHERE (id = ?)", [connectionId], (err, results, fields) => {
+    connection.query("UPDATE connections SET status = 1 WHERE id = ? AND status = 0", [connectionId], (err, results, fields) => {
         if (err)
             return error(err);
 
-        success(results);
+        success(results.affectedRows > 0);
     });
 };
 
@@ -72,7 +71,12 @@ module.exports.isConnectionMade = function(user1Id, user2Id, success, error)
     if (!user1Id || !user2Id)
         return error(new Error("User is null."));
 
-    
+    connection.query("SELECT id FROM connections WHERE (connections.user2 = ? AND connections.user1 = ?) OR (connections.user1 = ? AND connections.user2 = ?)", [user1Id, user2Id, user1Id, user2Id], (err, results, fields) => {
+        if (err)
+            return error(err);
+
+        success(results.length > 0);
+    });
 };
 
 module.exports.createConnection = function(creatorUserId, betweenUserId, success, error)
@@ -80,12 +84,24 @@ module.exports.createConnection = function(creatorUserId, betweenUserId, success
     if (!creatorUserId || !betweenUserId)
         return error(new Error("User is null."));
 
-    connection.query("UPDATE connections SET status = 1 WHERE (id = ?)", [connectionId], (err, results, fields) => {
-        if (err)
-            return error(err);
+    module.exports.isConnectionMade(creatorUserId, betweenUserId, (data) => {
 
-        success(results);
+        if (data)
+            return success(data);
+
+        connection.query("INSERT INTO connections(user1,user2) VALUES(?,?)", [creatorUserId, betweenUserId], (err, results, fields) => {
+            if (err)
+                return error(err);
+    
+            success(results.affectedRows > 0);
+        });
+
+    }, (err) => {
+        return error(err);
     });
+
+
+    
 };
 
 module.exports.getUserWithId = function(id, success, error)
