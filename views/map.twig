@@ -23,6 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="/css/map.css">
 	
+	<script src="/js/moment.min.js"></script>
 	<script src="/js/map-works.js"></script>
 	<script src="/js/route.js"> </script>
 	<title>TravelMate - Map</title>
@@ -62,16 +63,20 @@
 			</section>
 			<section class="searchmenu-tab" id="searchmenu-tab-ov" disabled="true">
 				<h3>Openbaar vervoer</h3>
-				<label>Vertrekhalte</label>
-				<div id="map-lijn-planner-geocoder1"></div>
 				<ul class="inline-radio-select" id="route-ov-period-go-type-select">
-					<li><input checked type="radio" name="route-ov-period-go-type" id="route-ov-period-go-type-arrive" value="arrive"><label for="route-ov-period-go-type-arrive">Aankomen om</label></li>
-					<li><input type="radio" name="route-ov-period-go-type" id="route-ov-period-go-type-depart" value="depart"><label for="route-ov-period-go-type-depart">Vertrekken om</label></li>
+					<li><input checked type="radio" oninput="showLijnResults();" name="route-ov-period-go-type" id="route-ov-period-go-type-arrive" value="arrive"><label for="route-ov-period-go-type-arrive">Aankomen om</label></li>
+					<li><input type="radio" oninput="showLijnResults();" name="route-ov-period-go-type" id="route-ov-period-go-type-depart" value="depart"><label for="route-ov-period-go-type-depart">Vertrekken om</label></li>
 				</ul>
-				<input type="time" name="route-ov-go-time" value="20:00" placeholder="tijdstip">
+				<input type="time" oninput="showLijnResults();" name="route-ov-go-time" id="route-ov-go-time" value="20:00" placeholder="tijdstip">
 				<ul class="inline-radio-select" id="route-ov-period-select">
-					<li><input checked type="radio" name="route-ov-go-period" id="route-ov-go-period-today" value="today"><label for="route-ov-go-period-today">Vandaag</label></li>
-					<li><input type="radio" name="route-ov-go-period" id="route-ov-go-period-tomorrow" value="tomorrow"><label for="route-ov-go-period-tomorrow">Morgen</label></li>
+					<li><input checked type="radio" oninput="showLijnResults();" name="route-ov-go-period" id="route-ov-go-period-today" value="today"><label for="route-ov-go-period-today">Vandaag</label></li>
+					<li><input type="radio" oninput="showLijnResults();" name="route-ov-go-period" id="route-ov-go-period-tomorrow" value="tomorrow"><label for="route-ov-go-period-tomorrow">Morgen</label></li>
+				</ul>
+				<label>Vertrek en eindhalte</label>
+				<div id="map-lijn-planner-geocoder1"></div>
+				<div id="map-lijn-planner-geocoder2"></div>
+				<ul id="route-ov-lijn-results">
+
 				</ul>
 			</section>
 			<section class="searchmenu-tab" id="searchmenu-tab-no-route" disabled="false">

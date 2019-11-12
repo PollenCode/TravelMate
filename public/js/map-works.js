@@ -74,6 +74,50 @@ var loadedStops = {}
 var map;
 var start = [-122.662323, 45.523751];
 
+var selectedStop1, selectedStop2;
+function showLijnResults()
+{
+    var resultsElement = document.getElementById("route-ov-lijn-results");
+    resultsElement.innerHTML = null;
+
+    if (!selectedStop1 || !selectedStop2)
+        return;
+
+    var time = document.getElementById("route-ov-go-time").value;
+    var arrive = document.getElementById("route-ov-period-go-type-arrive").checked;
+    var today = document.getElementById("route-ov-go-period-today").checked;
+    
+    console.log("time: " + time);
+    console.log(arrive ? "arrive" : "depart");
+    console.log(today ? "today" : "tomorrow");
+
+    var startOfDay = moment().startOf('day');
+    var timeMoment = moment(time,"hh:mm");
+    startOfDay = startOfDay.add(timeMoment.hours(), 'hours').add(timeMoment.minutes(), 'minutes');
+    if (!today)
+        startOfDay = startOfDay.add(1, 'days');
+
+    console.log("startOfDay: " + startOfDay.format("YYYY-MM-DD'T'HH:mm:ss"));
+  
+
+    //selectedStop1.entiteitnummer
+    //selectedStop1.haltenummer -> {latitude longitude}
+    //selectedStop1.omschrijving
+    //selectedStop1.geoCoordinaat
+
+    //var url = "https://api.delijn.be/DLKernOpenData/api/v1/routeplan/{vertrekLatlng}/{bestemmingLatlng}[&tijdstip][&vertrekAankomst][&vervoersOptie]"
+    //https://api.delijn.be/DLKernOpenData/api/v1/routeplan/{vertrekLatlng}/{bestemmingLatlng}[?aanvraagType][&tijdstip][&vertrekAankomst][&vervoersOptie]
+    //dl()
+
+    
+    /*for(var i = 0; i < lijnData.length; i++)
+    {
+        var listElement = document.createElement("li");
+        listElement.innerText = "lijn result";
+    }*/
+    
+}
+
 $(() => {
   
     var markerTemplate = $("#marker-template").html();
@@ -101,16 +145,17 @@ $(() => {
         zoom: 7.2
     });
 
-    var geocoder = new MapboxGeocoder({
+    /*var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl
     });
-    $("#main-geocoder").append(geocoder.onAdd(map));
+    $("#main-geocoder").append(geocoder.onAdd(map));*/
 
 
 
     //https://api.delijn.be/DLZoekOpenData/v1/zoek/haltes/{zoekArgument}[?huidigePositie][&startIndex][&maxAantalHits]
 
+   
 
 	var mapLijnPlannerGeocoder1 = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
@@ -119,28 +164,27 @@ $(() => {
         placeholder: "Vertrekhalte",
         mapboxgl: mapboxgl
     });
-    var el = mapLijnPlannerGeocoder1.onAdd(map);
-    $("#map-lijn-planner-geocoder1").append(el);
+    $("#map-lijn-planner-geocoder1").append(mapLijnPlannerGeocoder1.onAdd(map));
     mapLijnPlannerGeocoder1.on('result', function(result) {
-        var el = document.querySelector("#map-lijn-planner-geocoder1 ul");
-        el.innerHTML = "";
-
-        var lijnData = result.result["lijn_data"];
-
-
-        console.log(lijnData);
-
-        //dl("", (data) => {}, (ex) => {});
+        selectedStop1 = result.result["lijn_data"];
+        showLijnResults();
     });
-   /* var mapLijnPlannerGeocoder2 = new MapboxGeocoder({
+
+    var mapLijnPlannerGeocoder2 = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         localGeocoder: lijnGeocoder,
         zoom: 14,
-        placeholder: "Geeft halte",
+        placeholder: "Aankomsthalte",
         mapboxgl: mapboxgl
     });
-    $("#map-lijn-planner-geocoder2").append(mapLijnPlannerGeocoder2.onAdd(map));*/
+    $("#map-lijn-planner-geocoder2").append(mapLijnPlannerGeocoder2.onAdd(map));
+    mapLijnPlannerGeocoder2.on('result', function(result) {
+        selectedStop2 = result.result["lijn_data"];
+        showLijnResults();
+    });
 
+
+    
 
 
     var getStopsFunc = (result) => {
