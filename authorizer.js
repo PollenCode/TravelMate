@@ -73,9 +73,9 @@ module.exports.setupPassport = function(passport) {
             const hashedPassword = salter.hashPasswordWithRandomSalt(password);
             var currentDateTime = moment().format("DD-MM-YYYY hh:mm:ss");
             var dateOfBirth = moment(req.body.dateOfBirth, "YYYY-MM-DD").format("DD-MM-YYYY");
-            var userRecord = [req.body.email, hashedPassword.hashed, hashedPassword.withSalt, req.body.firstName, req.body.lastName, dateOfBirth, currentDateTime, ""];
+            var userRecord = [req.body.email, hashedPassword.hashed, hashedPassword.withSalt, req.body.firstName, req.body.lastName, dateOfBirth, currentDateTime];
 
-            if (connection.query("INSERT INTO users(email,passwordHash,passwordSalt,firstName,lastName,dateOfBirth,dateOfRegister,friendIds) VALUES(?,?,?,?,?,?,?,?)", userRecord, (error, results, fields) => {
+            if (connection.query("INSERT INTO users(email,passwordHash,passwordSalt,firstName,lastName,dateOfBirth,dateOfRegister) VALUES(?,?,?,?,?,?,?)", userRecord, (error, results, fields) => {
 
                 if (error)
                     return next(error);

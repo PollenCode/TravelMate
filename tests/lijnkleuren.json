@@ -1,0 +1,4954 @@
+{
+	"kleuren": [
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "TU",
+			"omschrijving": "Turkoois",
+			"rgb": {
+				"rood": 0,
+				"groen": 153,
+				"blauw": 170
+			},
+			"hex": "0099AA",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/TU"
+				}
+			]
+		},
+		{
+			"code": "RZ",
+			"omschrijving": "Roze",
+			"rgb": {
+				"rood": 255,
+				"groen": 136,
+				"blauw": 170
+			},
+			"hex": "FF88AA",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/RZ"
+				}
+			]
+		},
+		{
+			"code": "OR",
+			"omschrijving": "Oranje",
+			"rgb": {
+				"rood": 238,
+				"groen": 136,
+				"blauw": 34
+			},
+			"hex": "EE8822",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/OR"
+				}
+			]
+		},
+		{
+			"code": "RO",
+			"omschrijving": "Rood",
+			"rgb": {
+				"rood": 187,
+				"groen": 0,
+				"blauw": 34
+			},
+			"hex": "BB0022",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/RO"
+				}
+			]
+		},
+		{
+			"code": "PA",
+			"omschrijving": "Paars",
+			"rgb": {
+				"rood": 153,
+				"groen": 17,
+				"blauw": 153
+			},
+			"hex": "991199",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/PA"
+				}
+			]
+		},
+		{
+			"code": "MA",
+			"omschrijving": "Magenta",
+			"rgb": {
+				"rood": 221,
+				"groen": 0,
+				"blauw": 119
+			},
+			"hex": "DD0077",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/MA"
+				}
+			]
+		},
+		{
+			"code": "LB",
+			"omschrijving": "Lichtblauw",
+			"rgb": {
+				"rood": 170,
+				"groen": 204,
+				"blauw": 238
+			},
+			"hex": "AACCEE",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/LB"
+				}
+			]
+		},
+		{
+			"code": "GE",
+			"omschrijving": "Geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 204,
+				"blauw": 17
+			},
+			"hex": "FFCC11",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GE"
+				}
+			]
+		},
+		{
+			"code": "GR",
+			"omschrijving": "Groen",
+			"rgb": {
+				"rood": 34,
+				"groen": 153,
+				"blauw": 34
+			},
+			"hex": "229922",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GR"
+				}
+			]
+		},
+		{
+			"code": "MU",
+			"omschrijving": "Munt",
+			"rgb": {
+				"rood": 119,
+				"groen": 204,
+				"blauw": 170
+			},
+			"hex": "77CCAA",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/MU"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "KA",
+			"omschrijving": "Kastanje",
+			"rgb": {
+				"rood": 153,
+				"groen": 85,
+				"blauw": 17
+			},
+			"hex": "995511",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/KA"
+				}
+			]
+		},
+		{
+			"code": "BL",
+			"omschrijving": "Blauw",
+			"rgb": {
+				"rood": 17,
+				"groen": 153,
+				"blauw": 221
+			},
+			"hex": "1199DD",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BL"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "ZA",
+			"omschrijving": "Zalm",
+			"rgb": {
+				"rood": 255,
+				"groen": 204,
+				"blauw": 170
+			},
+			"hex": "FFCCAA",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZA"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "BO",
+			"omschrijving": "Bordeaux",
+			"rgb": {
+				"rood": 119,
+				"groen": 17,
+				"blauw": 51
+			},
+			"hex": "771133",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BO"
+				}
+			]
+		},
+		{
+			"code": "KI",
+			"omschrijving": "Kaki",
+			"rgb": {
+				"rood": 68,
+				"groen": 68,
+				"blauw": 17
+			},
+			"hex": "444411",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/KI"
+				}
+			]
+		},
+		{
+			"code": "DB",
+			"omschrijving": "Donkerblauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 68,
+				"blauw": 187
+			},
+			"hex": "0044BB",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/DB"
+				}
+			]
+		},
+		{
+			"code": "LG",
+			"omschrijving": "Lichtgroen",
+			"rgb": {
+				"rood": 187,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "BBDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/LG"
+				}
+			]
+		},
+		{
+			"code": "PE",
+			"omschrijving": "Petrol",
+			"rgb": {
+				"rood": 0,
+				"groen": 85,
+				"blauw": 85
+			},
+			"hex": "005555",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/PE"
+				}
+			]
+		},
+		{
+			"code": "ST",
+			"omschrijving": "Staal",
+			"rgb": {
+				"rood": 136,
+				"groen": 153,
+				"blauw": 170
+			},
+			"hex": "8899AA",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ST"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "Wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "Geel De Lijn",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "Zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Crème",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "Blauw De Lijn",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "ZW",
+			"omschrijving": "DeLijn zwart",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 0
+			},
+			"hex": "000000",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+				}
+			]
+		},
+		{
+			"code": "CR",
+			"omschrijving": "Creme",
+			"rgb": {
+				"rood": 197,
+				"groen": 170,
+				"blauw": 119
+			},
+			"hex": "C5AA77",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/CR"
+				}
+			]
+		},
+		{
+			"code": "BD",
+			"omschrijving": "DeLijn blauw",
+			"rgb": {
+				"rood": 0,
+				"groen": 0,
+				"blauw": 153
+			},
+			"hex": "000099",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
+				}
+			]
+		},
+		{
+			"code": "WI",
+			"omschrijving": "DeLijn wit",
+			"rgb": {
+				"rood": 255,
+				"groen": 255,
+				"blauw": 255
+			},
+			"hex": "FFFFFF",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+				}
+			]
+		},
+		{
+			"code": "GD",
+			"omschrijving": "DeLijn geel",
+			"rgb": {
+				"rood": 255,
+				"groen": 221,
+				"blauw": 0
+			},
+			"hex": "FFDD00",
+			"links": [
+				{
+					"rel": "detail",
+					"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/GD"
+				}
+			]
+		}
+	],
+	"links": [
+		{
+			"rel": "self",
+			"url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren"
+		}
+	]
+}

@@ -1,26 +1,17 @@
 var mysql = require("mysql");
 var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "8vyD3SR=_uGa5!s*jcXTbFzaV",
-  database: "travelmate"
+    host: "localhost",
+    user: "root",
+    password: "8vyD3SR=_uGa5!s*jcXTbFzaV",
+    database: "travelmate"
 });
-
-/* OBSOLETE
-function createUserFromRow(sqlResults)
-{
-    var userObject = {};
-    for(var v in sqlResults[0])
-        userObject[v] = sqlResults[0][v];
-    return userObject;
-}*/
 
 module.exports.getIncomingConnections = function(userId, success, error) 
 {
     if (!userId)
         return error(new Error("getIncomingConnections: userId is null."));
 
-    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = ? AND connections.status = 0)", [userId], (err, results, fields) => {
+    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,users.currentRoute,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = ? AND connections.status = 0)", [userId], (err, results, fields) => {
         if (err)
             return error(err);
         
@@ -33,7 +24,7 @@ module.exports.getPendingConnections = function(userId, success, error)
     if (!userId)
         return error(new Error("getPendingConnections: userId is null."));
 
-    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user2 = users.id AND connections.user1 = ? AND connections.status = 0)", [userId], (err, results, fields) => {
+    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,users.currentRoute,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user2 = users.id AND connections.user1 = ? AND connections.status = 0)", [userId], (err, results, fields) => {
         if (err)
             return error(err);
 
@@ -46,7 +37,7 @@ module.exports.getConnections = function(userId, success, error)
     if (!userId)
         return error(new Error("getConnections: userId is null."));
 
-    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = ? AND connections.status = 1) OR (connections.user2 = users.id AND connections.user1 = ? AND connections.status = 1)", [userId, userId], (err, results, fields) => {
+    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,users.currentRoute,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = ? AND connections.status = 1) OR (connections.user2 = users.id AND connections.user1 = ? AND connections.status = 1)", [userId, userId], (err, results, fields) => {
         if (err)
             return error(err);
 
@@ -167,7 +158,32 @@ module.exports.getAllConnections = function(userId, success, error)
         })
     }, (err) => {
         return error(err);
-    })
+    });
+}
+
+module.exports.setRoute = function(userId, route, success, error)
+{
+    connection.query("UPDATE users SET currentRoute = ? WHERE id = ?", [route, userId], (err, results, fields) => {
+        if (err)
+            return error(err);
+        if (results.affectedRows == 0)
+            return error(new Error("No route was set."));
+
+        success(true);
+    });
+}
+
+module.exports.getFriendsWithRoute = function(userId, success, error)
+{
+    if (!userId)
+        return error(new Error("getFriendsWithRoute: userId is null."));
+
+    connection.query("SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,users.currentRoute,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = ? AND connections.status = 1 AND users.currentRoute IS NOT NULL) OR (connections.user2 = users.id AND connections.user1 = ? AND connections.status = 1 AND users.currentRoute IS NOT NULL)", [userId, userId], (err, results, fields) => {
+        if (err)
+            return error(err);
+
+        success(results);
+    });
 }
 
 // Accept friend incoming friend request
@@ -180,10 +196,10 @@ module.exports.getAllConnections = function(userId, success, error)
 // INSERT INTO connections(user1,user2) VALUES(7,8)
 
 // Get all incoming friends, user1 is connection maker
-// SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = 7 AND connections.status = 0)
+// SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,users.currentRoute,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = 7 AND connections.status = 0)
 
 // Get all pending friends, user1 is connection maker
-// SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user2 = users.id AND connections.user1 = 7 AND connections.status = 0)
+// SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,users.currentRoute,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user2 = users.id AND connections.user1 = 7 AND connections.status = 0)
 
 // Get all accepted friends for user with id 7 
-// SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = 7 AND connections.status = 1) OR (connections.user2 = users.id AND connections.user1 = 7 AND connections.status = 1)
+// SELECT users.id,users.email,users.firstName,users.lastName,users.dateOfBirth,users.dateOfRegister,users.currentRoute,connections.id AS connectionId,connections.user1,connections.user2 FROM users INNER JOIN connections ON (connections.user1 = users.id AND connections.user2 = 7 AND connections.status = 1) OR (connections.user2 = users.id AND connections.user1 = 7 AND connections.status = 1)

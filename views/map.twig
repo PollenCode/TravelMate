@@ -42,9 +42,10 @@
 	</div>
 
 	
-	<div class="searchmenu">
+	<div id="searchmenu">
 		<a href="/"><img id="searchmenu-logo" src="/img/travelmatelogo3.png"></a>
 		<div id="searchmenu-content">
+			<button class="btn2" onclick="saveRoute();">Opslaan</button>
 			<h2>Mijn volgende route</h2>
 			<ul id="searchmenu-tabs">
 				<li onclick="selectTab('searchmenu-tab','searchmenu-tab-car'); planSelectRouteType('car');">Auto</li>
@@ -53,8 +54,8 @@
 			</ul>
 			<section class="searchmenu-tab" id="searchmenu-tab-car" disabled="true">
 				<h3>Auto</h3>
-				<label>Vertrek tijdstip</label>
-				<input type="time" name="route-car-go-time" value="20:00" placeholder="vertrek tijdstip">
+				<label class="searchmenu-title">Vertrek tijdstip</label>
+				<input type="time" name="route-car-go-time" id="route-car-go-time" value="20:00" placeholder="vertrek tijdstip">
 				<ul class="inline-radio-select" id="route-car-period-select">
 					<li><input checked type="radio" name="route-car-go-period" id="route-car-go-period-today" value="today"><label for="route-car-go-period-today">Vandaag</label></li>
 					<li><input type="radio" name="route-car-go-period" id="route-car-go-period-tomorrow" value="tomorrow"><label for="route-car-go-period-tomorrow">Morgen</label></li>
@@ -64,20 +65,22 @@
 			<section class="searchmenu-tab" id="searchmenu-tab-ov" disabled="true">
 				<h3>Openbaar vervoer</h3>
 				<ul class="inline-radio-select" id="route-ov-period-go-type-select">
-					<li><input checked type="radio" oninput="showLijnResults();" name="route-ov-period-go-type" id="route-ov-period-go-type-arrive" value="arrive"><label for="route-ov-period-go-type-arrive">Aankomen om</label></li>
-					<li><input type="radio" oninput="showLijnResults();" name="route-ov-period-go-type" id="route-ov-period-go-type-depart" value="depart"><label for="route-ov-period-go-type-depart">Vertrekken om</label></li>
+					<li><input checked type="radio" oninput="showLijnResults(true);" name="route-ov-period-go-type" id="route-ov-period-go-type-arrive" value="arrive"><label for="route-ov-period-go-type-arrive">Aankomen om</label></li>
+					<li><input type="radio" oninput="showLijnResults(true);" name="route-ov-period-go-type" id="route-ov-period-go-type-depart" value="depart"><label for="route-ov-period-go-type-depart">Vertrekken om</label></li>
 				</ul>
-				<input type="time" oninput="showLijnResults();" name="route-ov-go-time" id="route-ov-go-time" value="20:00" placeholder="tijdstip">
+				<input type="time" oninput="showLijnResults(true);" name="route-ov-go-time" id="route-ov-go-time" value="20:00" placeholder="tijdstip">
 				<ul class="inline-radio-select" id="route-ov-period-select">
-					<li><input checked type="radio" oninput="showLijnResults();" name="route-ov-go-period" id="route-ov-go-period-today" value="today"><label for="route-ov-go-period-today">Vandaag</label></li>
-					<li><input type="radio" oninput="showLijnResults();" name="route-ov-go-period" id="route-ov-go-period-tomorrow" value="tomorrow"><label for="route-ov-go-period-tomorrow">Morgen</label></li>
+					<li><input checked type="radio" oninput="showLijnResults(true);" name="route-ov-go-period" id="route-ov-go-period-today" value="today"><label for="route-ov-go-period-today">Vandaag</label></li>
+					<li><input type="radio" oninput="showLijnResults(true);" name="route-ov-go-period" id="route-ov-go-period-tomorrow" value="tomorrow"><label for="route-ov-go-period-tomorrow">Morgen</label></li>
 				</ul>
-				<label>Vertrek en eindhalte</label>
+				<label class="searchmenu-title">Vertrek en eindhalte</label>
 				<div id="map-lijn-planner-geocoder1"></div>
 				<div id="map-lijn-planner-geocoder2"></div>
-				<ul id="route-ov-lijn-results">
-
-				</ul>
+				<div id="route-ov-seach-results">
+					<button class="btn2" onclick="showLijnResults(false); saveRoute();">Bekijk routes</button>
+					<label class="searchmenu-title">Resultaten van DeLijn</label>
+					<ul id="route-ov-lijn-results"></ul>
+				</div>
 			</section>
 			<section class="searchmenu-tab" id="searchmenu-tab-no-route" disabled="false">
 				<h3>Geen route</h3>
@@ -86,6 +89,9 @@
 			</section>
 		</div>
 	</div>
+	<ul id="friend-routes">
+		
+	</ul>
 
 	<div class="containerSearch">	
 	</div>
@@ -95,6 +101,7 @@
 			<p class="marker-stop-name">{stop.name} <span class="marker-stop-id">({stop.id})</span></p>
 		</div>
 	</div>
+	
 
 	<img id="page-loading-indicator" src="/img/loading.svg" disabled="false">
 	<div id="screen-fader" disabled="false"></div>

@@ -3,12 +3,18 @@
     color: #442;  /* De Lijn kleur: #fd0 */
 }
 
-#marker-template {
+#marker-template, #delijn-route-template {
     display: none;
 }
 
 .marker {
     z-index: 5;
+}
+
+.lijn-number-tag {
+    border-radius: 5px;
+    padding: 2px 4px;
+    font-weight: bold;
 }
 
 .marker .marker-content {
@@ -29,4 +35,33 @@
 
 .marker .marker-content .marker-stop-id {
     font-size: 0.7rem;
+}
+
+/* Fontawesome */
+.fas.fa-star {
+    color: gold;
+}
+
+#route-ov-seach-results{
+    display: none;
+}
+
+#friend-routes {
+    position: fixed;
+    bottom: 25px;
+    right: 0px;
+    height: auto;
+    width: 25%;
+    overflow-x: hidden;
+}
+#friend-routes li {
+    background-color: #333;
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+}
+#friend-routes li p {
+    font-size: 0.8em;
+    background-color: #444;
+    padding: 6px;
 }

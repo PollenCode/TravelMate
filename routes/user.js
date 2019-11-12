@@ -6,14 +6,6 @@ const util = require("util");
 const moment = require("moment");
 const bcrypt = require("bcrypt");
 const query = require("../query");
-
-var mysql = require("mysql");
-var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "8vyD3SR=_uGa5!s*jcXTbFzaV",
-  database: "travelmate"
-});
  
 router.post("/register", (req, res, next) => {
     req.errorPage = "register";
@@ -84,6 +76,64 @@ router.get("/me", (req, res, next) => {
             user: req.user
         });
     }
+});
+
+router.post("/getRoute", (req, res, next) => {
+
+    if (!req.body.userId)
+        req.body.userId = req.user.id;
+
+    query.getUserWithId(req.body.userId, (user) => {
+        res.json({
+            status: "ok",
+            data: JSON.parse(user.currentRoute)
+        });
+    }, (error) => {
+        res.json({
+            status: "failed",
+            message: error
+        });
+    });
+});
+
+router.post("/getFriendRoutes", (req, res, next) => {
+
+    query.getFriendsWithRoute(req.user.id, (results) => {
+        res.json({
+            status: "ok",
+            data: results
+        });
+    }, (error) => {
+        res.json({
+            status: "failed",
+            message: error
+        });
+    });
+});
+
+router.post("/setRoute", (req, res, next) => {
+
+    if (!req.body.route)
+    {
+        console.log(util.inspect(req.body));
+        res.json({
+            status: "failed",
+            message: "No route was given"
+        });
+        return;
+    }
+
+    query.setRoute(req.user.id, req.body.route, (success) => {
+        res.json({
+            status: "ok",
+            message: "Route was set."
+        });
+    }, (error) => {
+        res.json({
+            status: "failed",
+            message: error
+        });
+    });
 });
 
 router.get("/removeFriend", (req, res, next) => {

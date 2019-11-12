@@ -110,11 +110,13 @@ div.incards > h2 {
 	text-align: center;
 }
 
-div.searchmenu {
+#searchmenu {
 	position: absolute;
 	z-index: 1;
 	background-color: #333333;
 	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
 	width: 25%;
 }
 
@@ -140,7 +142,7 @@ div.searchmenu {
 }
 
 
-div.searchmenu h2 {
+#searchmenu h2 {
 	color: white;
 }
 
@@ -275,6 +277,34 @@ ul#searchmenu-tabs li + li {
 	font-size: 16px;
 }
 
+.searchmenu-title {
+	font-weight: bold;
+	margin: 10px 5px;
+	display: block;
+}
+#route-ov-lijn-results {
+	padding: 5px;
+	background-color: #222;
+	color: white;
+}
+.route-ov-lijn-result {
+	background-color: #444;
+	list-style: none;
+	margin-bottom: 5px;
+}
+.route-ov-lijn-result h4 {
+	padding: 5px;
+	font-weight: bold;
+}
+.route-ov-lijn-result ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 5px;
+	margin: 2px;
+	background-color: #555;
+	/* color: white; */
+}
+
 h1 {
 	text-align: center;
 	margin: 15px;
@@ -322,11 +352,13 @@ input[type="submit"], .btn {
 	border-radius: 4px;
 }
 
-input[type=submit]:hover, button:hover {
+input[type=submit]:hover, .btn:hover {
   transition: 250ms;
   letter-spacing: 1px;
   font-weight: bold;
 }
+
+
 
 input, textarea {
 	width: 100%;
@@ -563,6 +595,19 @@ form input.input-problem, form textarea.input-problem {
 	transition: 250ms;
 	border: 1px solid #ccc;
 	border-radius: 4px;
+}
+
+.btn2 {
+	background-color: #2a628f;
+	color: white;
+	padding: 5px 15px;
+	transition: 250ms;
+	border-radius: 4px;
+	border: none;
+}
+.btn2:hover {
+	letter-spacing: 1px;
+	transition: 250ms;
 }
 
 [collapsed="true"] {
